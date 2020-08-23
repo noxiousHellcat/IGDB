@@ -1,0 +1,37 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color:white;
+    background-size: cover;
+    background-position: center;
+    font-family:monospace;
+}
+.page
+{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 12px;
+}
+.header {
+    background-color:whitesmoke;
+    grid-area: 1 / 1 / 2 / 6; 
+}
+
+.body {
+    background-color:whitesmoke;
+     grid-area: 2 / 1 / 5 / 5; 
+}
+.footer {
+    background-color:whitesmoke; 
+    grid-area: 5 / 1 / 6 / 5;
+}
+.playlists {
+    background-color:whitesmoke;
+     grid-area: 2 / 5 / 4 / 6; 
+}
+.comments { 
+    background-color:whitesmoke;
+    grid-area: 4 / 5 / 6 / 6; 
+}
