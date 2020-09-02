@@ -13,12 +13,12 @@ body{
   {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-column-gap: 10px;  
+    grid-column-gap: 10px;
     grid-row-gap: 10px;
   }
   .header {
     background-color:whitesmoke;
-    grid-area: 1 / 1 / 2 / 6; 
+    grid-area: 1 / 1 / 2 / 6;
     height:100%;
     border-bottom:solid black;
     border-radius: 7px;
@@ -48,28 +48,33 @@ body{
 	grid-area: 2 / 1 / 2 / 6;
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
-	grid-template-rows: repeat(5, 1fr);
+	grid-template-rows: repeat(1, 1fr);
 	grid-column-gap: 10px;
 	grid-row-gap: 0px;
 }
-.rightt{
-	grid-area: 1 / 4 / 4 / 6;
+
+.leftt{
+	grid-area: 2 / 1 / 4 / 4;
+  display: grid;
+	grid-template-columns: repeat(5, 1fr);
 	background-color: #E7DFDF;
+  padding:3em;
 	border:solid black;
-	margin-right: 2em;
 	border-radius: 12px;
 }
-.leftt{
-	grid-area: 1 / 1 / 4 / 4;
-	margin-left: 2em;
-	background-color: #E7DFDF;
-	border:solid black;
-	border-radius: 12px;
+.gamepic
+{
+  grid-area: 1 / 1 / 2 / 4;
+}
+.gamedesc
+{
+  padding-top: 3em;
+  grid-area: 1 / 4 / 2 / 6;
 }
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
-  position: relative;
+  position:inherit;
   top: 50%;
   width: auto;
   padding: 16px;
@@ -138,12 +143,12 @@ body{
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .4} 
+  from {opacity: .4}
   to {opacity: 1}
 }
 
 @keyframes fade {
-  from {opacity: .4} 
+  from {opacity: .4}
   to {opacity: 1}
 }
 
@@ -151,4 +156,3 @@ body{
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
 }
-
