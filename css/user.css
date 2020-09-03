@@ -9,18 +9,21 @@ body{
   }
   .page
   {
+    margin-top: 1em;
     display: grid;
-    grid-column-gap: 10px;  
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows:repeat(6, 1fr);
+    grid-column-gap: 10px;
     grid-row-gap: 10px;
+    width: auto;
   }
   .header {
     background-color:whitesmoke;
-    grid-area: 1 / 1 / 2 / 6; 
-    height:100%;
+    height:fit-content;
     border-bottom:solid black;
     border-radius: 7px;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(5, 1fr) ;
     background-color: rebeccapurple;
   }
   .header a{
@@ -40,15 +43,15 @@ body{
   }
 .body {
     background-color:whitesmoke;
-     grid-area: 2 / 1 / 5 / 4; 
+     grid-area: 1 / 1 / 5 / 4;
      border-radius: 12px;
      border: solid black;
      box-shadow: 5px 5px #888888;
      padding: 20px;
 }
 .footer {
-    background-color:whitesmoke; 
-    grid-area: 5 / 1 / 6 / 4;
+    background-color:whitesmoke;
+    grid-area: 5/ 1 / 7 / 4;
     border-radius: 12px;
     border: solid black;
     box-shadow: 5px 5px #888888;
@@ -56,16 +59,17 @@ body{
 }
 .playlists {
     background-color:whitesmoke;
-     grid-area: 2/ 4 / 4 / 6;
-     border-radius: 12px; 
+     grid-area: 1/ 4 / 4 / 6;
+     border-radius: 12px;
      border: solid black;
      box-shadow: 5px 5px #888888;
      padding: 20px;
 }
-.comments { 
+.comments {
+  padding: 20px;
     background-color:whitesmoke;
-    grid-area: 4 / 4 / 6 / 6;
-    border-radius: 12px; 
+    grid-area: 4 / 4 / 7 / 6;
+    border-radius: 12px;
     border: solid black;
     box-shadow: 5px 5px #888888;
 }
