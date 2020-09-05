@@ -45,25 +45,66 @@
         grid-template-rows: repeat(10, 1fr);
         grid-column-gap: 0px;
         grid-row-gap: 0px;
-        background-color: aqua;
-        height: 100%;
+        height: auto;
+        width: 100vw;
+        height: 100vh
     }
-    .playground { 
-        grid-area: 2 / 2 / 10 / 10; 
-        background-color: red;
-    }
-    .playsholder { 
-        grid-area: 2 / 2 / 3 / 3; 
-        background-color: green;
-
-    }
-    .playlist { 
-        grid-area: 3 / 2 / 10 / 10; 
-        background-color:pink;
-
-    }
-    .playbutton { 
-        grid-area: 2 / 3 / 3 / 6; 
+        
+    .playground {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5, 1fr); 
         background-color: limegreen;
-
+        grid-area: 2 / 2 / 10 / 10;
+        text-align: right; 
+    }
+    #return{
+      padding-top:3em;
+      padding-right: 3em;
+      grid-area: 1 / 4 / 2 / 6;
+    }
+    
+    .playsholder { 
+        background-color: green;
+        grid-area: 2 / 2 / 3 / 3; 
+    }
+    .playarea {
+        background-color: red;
+         grid-area: 3 / 2 / 10 / 10;
+    }
+    .playbutton {
+        background-color: blue;
+         grid-area: 2 / 3 / 3 / 6; 
     } 
+
+
+    /*Modal*/
+
+    #addnew {
+      margin-left: 3em;
+      margin-top: 3em;
+    }
+    .modal {
+      display: none; 
+      position: fixed;
+      z-index: 1; 
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
