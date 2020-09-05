@@ -64,9 +64,9 @@ body{
  }
 .bckgrnd-content {
   grid-area:  3 / 1 / 8 / 11;
-  border-bottom-left-radius: : 12px;
-    border-bottom-right-radius: : 12px;
-  border-bottom: : solid black 2px;
+  border-bottom-left-radius:  12px;
+  border-bottom-right-radius : 12px;
+  border-bottom:solid black 2px;
   border-left: solid black 2px;
   border-right: solid black 2px;
 }
@@ -75,7 +75,7 @@ body{
   border-radius: 10px;
   border: solid black 1px;
   background-color: white;
-  box-shadow: 5px 5px #888888;
+  box-shadow: 5px 5px rgba(68, 68, 68, 0.6);
   border-radius: 10px;
 }
 .gamepic_space img {
@@ -85,32 +85,70 @@ body{
   border-radius: 12px;
 }
 .info_space {
-  grid-area: 3 / 8 / 7 / 10;
+  grid-area: 5 / 2 / 7 / 4;
   border: solid black 2px;
   margin: 10px;
   border-radius: 10px;
   padding: 5px;
   background-color: white;
-  box-shadow: 5px 5px #888888;
+  box-shadow: 5px 5px rgba(68, 68, 68, 0.5);
+
   border-radius: 10px;
 }
 .title_space {
   margin-top: 20px;
-   grid-area:   2 / 4 / 3 / 7;
+  grid-area: 1 / 2 / 2 / 5;
  }
  #game_title
  {
    border: solid black 1px;
    background-color: white;
-   box-shadow: 5px 5px #888888;
+   box-shadow: 5px 5px rgba(68, 68, 68, 0.5);
+
    border-radius: 10px;
  }
 .main-content {
   margin-top: 10px;
- grid-area: 3 / 4 / 7 / 8;
+ grid-area:  2 / 4 / 6 / 8; 
  overflow-y:hidden;
  border: solid black 1px;
  background-color: white;
- box-shadow: 5px 5px #888888;
+ box-shadow: 5px 5px rgba(68, 68, 68, 0.5);
+
  border-radius: 10px;
 padding: 10px;}
+
+.comments
+{
+  background-color: white;
+  margin-top: 40px;
+  grid-area:6 / 4 / 8 / 8;
+  border: solid black 1px;
+  box-shadow: 5px 5px rgba(68, 68, 68, 0.5);
+  border-radius: 10px;
+  margin: 3em;
+
+}
+#comments
+{
+  margin-left: 3em;
+}
+#comments textarea
+{
+ resize: none;
+}
+
+.latest_comments
+{
+  background-color: white;
+  grid-area: 2 / 8 / 5 / 10;
+  border: solid black 1px;
+  box-shadow: 5px 5px rgba(68, 68, 68, 0.5);
+  border-radius: 10px;
+}
+
+#latest_comments 
+{
+  margin-left: 3em;
+  margin-top: 3em;
+}
