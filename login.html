@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/logreg.css">
+        <title>IGDB - Login</title>
+    </head>
+    <body>
+            <div class = "header"><!--Header image here-->
+                <div>
+                <img src="https://github.com/noxiousHellcat/IGDB/blob/master/images/IGDB.png?raw=true" height="75" width="200">
+                </div>
+                <div id ="links">
+                    <a href ="home.html"> Home</a>
+                    <a href = "database">Database</a>
+                    <input type="search" placeholder="Search Game Titles..">
+                </div>    
+            </div>
+        
+        <div class = "log_box">
+            <div id = "box_title">
+                <h2>Something quirky  I don't know</h2>
+            </div>
+            <div id = "details">
+                <form>
+                    <p>Username</p>
+                    <input  id = "uname" type="text" name="" placeholder="Enter Username/E-mail">
+                    <p>Password</p>
+                    <input id = "pword" type="password" name="" placeholder="Enter Password">
+                    <br>
+                    <button id ="sub" type="submit" value="Login">Login</button>
+                    <br>
+                    <br>
+                </form>
+                    <button id ="reg_mdl" value = "Register">Register</button>
+                    <button id ="for_mdl" value = "Forgot Password">Forgot Password</button>
+            </div>
+        </div>
+        <div id="reg_Modal" class="modal">
+            <!-- Modal content -->
+            <div class="reg_modal">
+                <span class="close1">&times;</span>
+                <div id = "modal_title">
+                    <h2>Something quirky  I don't know</h2>
+                </div>
+              <form>
+                <p>Username</p>
+                <input  id = "uname" type="text" name="" placeholder="Enter Username">
+                <p>E-mail</p>
+                <input  id = "umail" type="email" name="" placeholder="Enter e-mail">
+                <input  id = "umail2" type="email" name="" placeholder="Confirm e-mail">
+                <p>Password</p>
+                <input id = "pword" type="password" name="" placeholder="Enter Password">
+                <input id = "pword2" type="password" name="" placeholder="Confrm Password">
+                <br>
+                <p>Birthday</p>
+                <input id = "borth" type="date" name="">
+                <br>
+                <br>
+            </form>
+            <button id ="sub" type="submit" value="Register">Register</button>
+            </div>
+          
+          </div>
+
+          <div id="forgot_Modal" class="modal">
+            <!-- Modal content -->
+            <div class="for_modal">
+                <span class="close2">&times;</span>
+                <div id = "modal_title">
+                    <h2>Something quirky  I don't know</h2>
+                </div>
+              <form>
+                <p>Username</p>
+                <input  id = "uname" type="text" name="" placeholder="Enter Username">
+                <p>E-mail</p>
+                <input  id = "umail" type="email" name="" placeholder="Enter E-mail">
+            </form>
+            <button id ="sub" type="submit" value="Register">Retrieve Password</button>
+            </div>
+          
+          </div>
+        <!---->
+     </div>
+   
+    <script src="js/login.js"></script>
+    </body>
+</html>

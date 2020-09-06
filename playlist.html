@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/playlist.css">
+    <title></title>
+  </head>
+  <body id = "page">
+    <div id ="filter"></div>
+    <div class = "header">
+      <!--Header image here-->
+      <img src="https://github.com/noxiousHellcat/IGDB/blob/master/images/IGDB.png?raw=true" height="75" width="200">
+      <div id ="links"> <a href ="home.html"> Home</a> <a href="login.html">Sign In/Register</a>
+        <input type="search" placeholder="Search Game Titles..">
+     </div>
+    </div>
+      
+    </div>
+    <div class="page">
+      <div class="playground"> 
+          <a id = "return" href = "">Return</a>
+      </div>
+      <div class="playsholder">
+      <h1>Playlists</h1>
+      </div>
+      <div class="playarea">
+      
+      </div>
+      <div class="playbutton"> 
+        <button id="addnew">Add New</button>
+      </div>
+
+      <div id="makenew" class="modal">
+      
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div class = "forms">
+            <div class ="form_title"><h1>Add new Playlist</h1></div>
+            <form class = "form_form" id = "form_form">
+            <p>Playlist Name</p>
+            <input type = "text" id = "play_title" placeholder = "Playlist name">
+            <p>Playlist Description </p>
+            <input type = "text" id = "play_desc" placeholder = "Playlist Description">
+          </form>
+          <br>
+            <button id = "submit">Submit</button>
+        </div>
+      
+      </div>
+    </div> 
+
+   
+  
+  <script src = "js/playlist.js"></script>
+  </body>
+</html>
