@@ -10,29 +10,26 @@ const urlencoder = bodyparser.urlencoded({
 
 app.set("view engine", "hbs")
 
-app.use(session({
-    secret: "im batman",
-    resave: false,
-    saveUninitialized:true,
-    cookie: {
-        maxAge:1000*60*60*24*30,
-        httpOnly: false
-    }
-}))
-
 app.use(express.static(__dirname + '/public'));
-
-// app.get("/", (req,res)=>{
-//     if(req.session.views){
-//         req.session.views++
-//     }else{
-//         req.session.views = 1
-//     }
-//     req.send("Views: " + req.session.views)
-// })
 
 app.get("/", (req,res)=>{
     res.render("home.hbs", {})
+})
+
+app.get("/login", (req,res)=>{
+    res.render("login.hbs", {})
+})
+
+app.get("/game", (req,res)=>{
+    res.render("game.hbs", {})
+})
+
+app.get("/playlist", (req,res)=>{
+    res.render("playlist.hbs", {})
+})
+
+app.get("/user_page", (req,res)=>{
+    res.render("user_page.hbs", {})
 })
 
 app.post("/login", urlencoder, (req,res)=>{
