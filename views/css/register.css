@@ -1,0 +1,148 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color:white;
+    background-size: cover;
+    background-position: center;
+    font-family:monospace;
+}
+.log_box{
+    width: 500px;
+    height: 500px;
+    background:whitesmoke;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    border-radius: 13px;
+    display:flex;
+    flex-direction: column;
+    border: solid black;
+    box-shadow: 5px 10px #888888;
+}
+.reg_box{
+    width: 500px;
+    height: 600px;
+    background:whitesmoke;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    border-radius: 13px;
+    display: flex;
+    flex-direction: column;
+    border: solid black;
+    box-shadow: 5px 10px #888888;
+}
+
+.log_box p{
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+
+.log_box input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.reg_box p{
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+
+.reg_box input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+#box_title
+{
+    border-radius: 10px 10px 0px 0px;
+    background-color: rebeccapurple;
+    text-align: center;
+}
+#details
+{
+    padding: 40px 40px 40px 70px;
+}
+#uname, #pword,#pword2, #umail, #umail2
+{
+   font-family:monospace;
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: red;
+    font-size: 16px; 
+}
+#borth{
+    font-family:monospace;
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: black;
+    font-size: 16px; 
+}
+#sub
+{
+    width: 100%;
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #fb2525;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+    font-family:monospace;
+}
+#sub:hover
+{
+    cursor: pointer;
+    background: #ffc107;
+    color: #000;
+}
+.log_box a{
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: darkgrey;
+}
+
+.log_box a:hover
+{
+    color: red;
+}
+
+.reg_box a{
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: darkgrey;
+}
+
+.reg_box a:hover
+{
+    color: red;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
