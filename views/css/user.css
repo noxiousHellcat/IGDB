@@ -1,0 +1,75 @@
+/*CSS unique to user_page.html*/
+body{
+    margin: 0;
+    padding: 0;
+    background-color:white;
+    background-size: cover;
+    background-position: center;
+    font-family:monospace;
+  }
+  .page
+  {
+    margin-top: 1em;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows:repeat(6, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    width: auto;
+  }
+  .header {
+    background-color:whitesmoke;
+    height:fit-content;
+    border-bottom:solid black;
+    border-radius: 7px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr) ;
+    background-color: rebeccapurple;
+  }
+  .header a{
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color:white;
+    float: center;
+  }
+  .header a:hover
+  {
+    color: greenyellow  ;
+  }
+  #links
+  {
+    grid-area: 1/5 ;
+  }
+.body {
+    background-color:whitesmoke;
+     grid-area: 1 / 1 / 5 / 4;
+     border-radius: 12px;
+     border: solid black;
+     box-shadow: 5px 5px #888888;
+     padding: 20px;
+}
+.footer {
+    background-color:whitesmoke;
+    grid-area: 5/ 1 / 7 / 4;
+    border-radius: 12px;
+    border: solid black;
+    box-shadow: 5px 5px #888888;
+    padding: 20px;
+}
+.playlists {
+    background-color:whitesmoke;
+     grid-area: 1/ 4 / 4 / 6;
+     border-radius: 12px;
+     border: solid black;
+     box-shadow: 5px 5px #888888;
+     padding: 20px;
+}
+.comments {
+  padding: 20px;
+    background-color:whitesmoke;
+    grid-area: 4 / 4 / 7 / 6;
+    border-radius: 12px;
+    border: solid black;
+    box-shadow: 5px 5px #888888;
+}
