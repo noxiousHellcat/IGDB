@@ -5,7 +5,7 @@
     </head>
     <body>
       <div class = "header"><!--Header image here-->
-          <img src="https://github.com/noxiousHellcat/IGDB/blob/master/images/IGDB.png?raw=true" height="75" width="200">
+          <img src="images/IGDB.png" height="75" width="200">
           <div id ="links">
               <a href ="/"> Home</a> 
             <a href ="/database"> Database</a> 
@@ -24,14 +24,44 @@
             <div class = "body">
                 <b><p>Name:</p></b><p id= "name">John Doe</p>
                 <b><p>Address:</p></b><p id = "address">Louisiana</p>
-                <b><p>Date Registered: </p></b><p id ="date">s</p>
-                <b><p>Last Active since:</p></b><p id = "activesince">s</p>
-                <b><p>Favorite Genres: </p></b><p id = "genre">s</p>
+                <b><p>Date Registered: </p></b><p id ="date">2020</p>
+                <b><p>Last Active since:</p></b><p id = "activesince">5 days ago</p>
+                <b><p>Favorite Genres: </p></b><p id = "genre">Arcade</p>
             </div>
-            <div class = "footer">Recent posts?</div>
+            <div class = "footer">
+                <h3>Recent Reviews</h3>
+            </div>
             <div class = "playlists">
               <div id = "playlist_s">
+                <a href="/playlist"><h3>Playlist 1</h3></a>
+                <a href="/playlist"><h3>Playlist 2</h3></a>
+                <a href="/playlist"><h3>Playlist 3</h3></a>
               </div>
+        <button id="addnew">Add New</button>
+      <div id="makenew" class="modal">
+      
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div class = "forms">
+            <div class ="form_title"><h1>Add new Playlist</h1></div>
+            <form class = "form_form" id = "form_form" method="POST" action="playlist">
+            <p>Playlist Name</p>
+            <input type = "text" id = "play_title" placeholder = "Playlist name">
+            <p>Playlist Description </p>
+            <input type = "text" id = "play_desc" placeholder = "Playlist Description">
+            <p>Playlist Visibility </p>
+            <select name="private">
+                            <option value="user">Public</option>
+                            <option value="game">Private</option>
+                        </select><br>
+            <button id = "submit">Submit</button>
+          </form>
+          <br>
+        </div>
+      
+      </div>
+    </div> 
             </div>
             <div class = "comments">
               <h3>Recent Comments</h3>
@@ -39,5 +69,6 @@
               </div>
             </div>
         </div>
+          <script src = "js/playlist.js"></script>
     </body>
 </html>

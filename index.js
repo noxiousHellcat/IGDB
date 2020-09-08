@@ -65,6 +65,12 @@ app.get("/user_page", urlencoder, (req,res)=>{
     res.render("user_page.hbs", {})
 })
 
+app.get("/playlist", urlencoder, (req,res)=>{
+    //view a playlist
+
+    res.render("playlist.hbs", {})
+})
+
 app.post("/game", urlencoder, (req,res)=>{
     //create a game
     let title = req.body.title
@@ -101,6 +107,7 @@ app.post("/playlist", urlencoder, (req,res)=>{
     let title = req.body.title
     let private = req.body.private
     let user_id = req.body.user_id
+    let description = req.body.description
 
     res.render("playlist.hbs", {})
 })

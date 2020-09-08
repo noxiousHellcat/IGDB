@@ -28,15 +28,16 @@
     </div>
     <div class="page">
       <div class="playground"> 
-          <a id = "return" href = "">Return</a>
+          <a id = "return" href = "/user_page">Return</a>
       </div>
       <div class="playsholder">
-      <h1>Playlists</h1>
+      <h1>Playlist</h1>
+      Description
       </div>
       <div class="playarea">
       
       </div>
-      <div class="playbutton"> 
+      {{!-- <div class="playbutton"> 
         <button id="addnew">Add New</button>
       </div>
 
@@ -47,21 +48,26 @@
           <span class="close">&times;</span>
           <div class = "forms">
             <div class ="form_title"><h1>Add new Playlist</h1></div>
-            <form class = "form_form" id = "form_form">
+            <form class = "form_form" id = "form_form" method="POST" action="playlist">
             <p>Playlist Name</p>
             <input type = "text" id = "play_title" placeholder = "Playlist name">
             <p>Playlist Description </p>
             <input type = "text" id = "play_desc" placeholder = "Playlist Description">
+            <p>Playlist Visibility </p>
+            <select name="private">
+                            <option value="user">Public</option>
+                            <option value="game">Private</option>
+                        </select><br>
+            <button id = "submit">Submit</button>
           </form>
           <br>
-            <button id = "submit">Submit</button>
         </div>
       
       </div>
     </div> 
 
    
-  
+   --}}
   <script src = "js/playlist.js"></script>
   </body>
 </html>
