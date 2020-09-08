@@ -116,7 +116,7 @@ app.post("/login", urlencoder, (req,res)=>{
     }
 })
 
-app.post("/register", (req,res)=>{
+app.post("/register", urlencoder, (req,res)=>{
     //register as a user
     let username = req.body.username
     let password = req.body.password
@@ -124,10 +124,10 @@ app.post("/register", (req,res)=>{
     let birthday = req.body.birthday
     let address = req.body.address
 
-    res.render("home.hbs", {})
+    res.render("user_page.hbs", {})
 })
 
-app.post("/forgotpassword", (req,res)=>{
+app.post("/forgotpassword", urlencoder, (req,res)=>{
     //retrieve forgotten password
     let username = req.body.username
     let email = req.body.email
