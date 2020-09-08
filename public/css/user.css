@@ -73,3 +73,61 @@ body{
     border: solid black;
     box-shadow: 5px 5px #888888;
 }
+
+/*Modal*/
+
+#addnew {
+  margin-left: 3em;
+  margin-top: 3em;
+}
+.modal {
+  display: none; 
+  position: fixed;
+  grid-area: 3 / 2 / 10 / 10;
+  z-index: 2; 
+  width: 40%;
+  height: 40%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  overflow: auto; /* Enable scroll if needed */
+  background-color:whitesmoke;
+  border-radius: 10px;
+}
+
+.close {
+  margin-right:28px ;
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+  #filter{
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    background-color: rgba(0,0,0,0.3); /* Black background with opacity */
+   z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover*/
+    display: none;
+  }
+
+
+  .forms
+  {
+    margin-top: 3em;
+    margin-left: 3em;
+  }
+  .forms input
+  {
+    width: 70%;
+  }

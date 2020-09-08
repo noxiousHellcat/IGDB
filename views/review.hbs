@@ -1,0 +1,80 @@
+</<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+      <link rel="stylesheet" type="text/css" href="css/review.css">
+    <title id = "igdb_title">IGDB - </title>
+  </head>
+  <body>
+    <div class = "header">
+      <!--Header image here-->
+      <img src="images/IGDB.png" height="75" width="200">
+      <div id ="links"> 
+        <a href ="/"> Home</a> 
+        <a href ="/database"> Database</a> 
+        <a href="/login">Sign In/Register</a>
+        <form method="GET" action="search">
+          <input type="search" name="query" placeholder="Search Game Titles or Users.."><br>
+          <button type="submit" value="Search">Search</button>
+          <select name="search_select">
+                            <option value="user">Users</option>
+                            <option value="game">Games</option>
+                        </select>
+        </form>
+     </div>
+    </div>
+<!--Container for things below-->
+    <div class = "page">
+    <div class ="gamepic_space">
+    <img id = "gamepic" src="https://i.ytimg.com/vi/90okTocF9DM/maxresdefault.jpg">
+    </div>
+    <div class ="info_space">
+    <b><p>Title:</p></b><span id = "title">Default Game </span>
+    <b><p>Publisher:</p></b><span id = "publisher">Default Game </span>
+    <b><p>Developer:</p></b><span id = "developer">BethEAsoft</span>
+    <b><p>Year Published:</p></b><span id = "year_published">Default Game </span>
+
+    </div>
+    <div class ="title_space">
+      <h1 id="game_title">Great game. Would recommend.</h1>
+    </div>
+    <div id = "main-content" class="main-content">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pulvinar vel quam sed porttitor. Donec sodales eget est quis eleifend. Vestibulum lacinia suscipit molestie.
+     In nec accumsan orci. In sodales ipsum in consequat consectetur. Curabitur fringilla nulla quis convallis sagittis. Cras porta dolor ut consequat posuere. Morbi ut eleifend
+     libero. Mauris ut dolor in arcu luctus semper eget id magna. Nam turpis purus, pellentesque fringilla pretium in, tincidunt sit amet massa. Sed vestibulum leo a malesuada commodo.
+     Morbi tincidunt urna quis risus dictum fermentum. Cras vel dignissim urna.
+
+      Praesent hendrerit placerat laoreet. Nulla imperdiet nulla at eros condimentum tincidunt. Cras quam elit, viverra elementum dolor vel, ullamcorper consectetur elit.
+      Morbi vel turpis ut sem laoreet imperdiet non in elit. Vestibulum vulputate eget risus id sollicitudin. Nullam non tortor et quam pharetra tristique ut nec nunc.
+       Fusce vitae ullamcorper arcu, nec iaculis tellus. Aliquam a pretium ipsum, vel euismod leo. Sed egestas ex sit amet suscipit vehicula. Donec lectus tellus, dignissim sed
+       leo et, feugiat aliquam turpis. Aenean imperdiet tincidunt elementum. Integer vitae finibus augue.
+
+      Praesent fermentum turpis nunc. Integer ultricies lacus at aliquet aliquam. Curabitur tempus nibh ut est mollis, non tincidunt velit blandit.
+      Vivamus at libero pellentesque mi aliquet sollicitudin. Mauris ex enim, cursus non mollis ut, egestas eget leo. Sed viverra risus libero, et
+      accumsan velit rhoncus vitae. Aenean nunc nisi, semper vel scelerisque at, imperdiet a nisi. Pellentesque habitant morbi tristique senectus et
+       netus et malesuada fames ac turpis egestas. Cras quis sem augue. Curabitur rutrum lorem lorem.
+       <br>
+       <h3>100/100</h3>
+    </div>
+
+    <div class = "comments">
+      <p id="curr_comments"></p>
+      <div id = "comments">
+      <form method="POST" action="comment">
+      <textarea name="comment" rows="4" cols="80">
+      </textarea>
+      <button type="submit">Comment</button>
+      </form>
+      </div>
+    </div>
+
+    <div class="latest_comments">
+      <div id = "latest_comments"><b>Latest Comments</b></div>
+    <div id = "insertion point">
+
+
+    </div>
+    </div>
+    </div>
+  </body>
+</html>

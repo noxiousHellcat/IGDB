@@ -71,6 +71,17 @@ body{
   padding-top: 3em;
   grid-area: 1 / 4 / 2 / 6;
 }
+.cards
+{
+  width:1000px;
+  height:auto;
+}
+.gamecard
+{
+  width:300px;
+  margin:10px;
+  float:left;
+}
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;

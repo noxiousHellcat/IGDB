@@ -85,9 +85,9 @@ body{
   border-radius: 12px;
 }
 .info_space {
-  grid-area: 5 / 2 / 7 / 4;
+  grid-area: 5 / 2 / 6 / 4;
   border: solid black 2px;
-  margin: 10px;
+  margin-top: 10px;
   border-radius: 10px;
   padding: 5px;
   background-color: white;
@@ -122,7 +122,7 @@ padding: 10px;}
 {
   background-color: white;
   margin-top: 40px;
-  grid-area:6 / 4 / 8 / 8;
+  grid-area:6 / 4 / 8 / 10;
   border: solid black 1px;
   box-shadow: 5px 5px rgba(68, 68, 68, 0.5);
   border-radius: 10px;

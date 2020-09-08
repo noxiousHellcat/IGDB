@@ -8,9 +8,19 @@
   <body>
     <div class = "header">
       <!--Header image here-->
-      <img src="https://github.com/noxiousHellcat/IGDB/blob/master/images/IGDB.png?raw=true" height="75" width="200">
-      <div id ="links"> <a href ="home.html"> Home</a> <a href="login.html">Sign In/Register</a>
-        <input type="search" placeholder="Search Game Titles..">
+      <img src="images/IGDB.png" height="75" width="200">
+      <div id ="links"> 
+        <a href ="/"> Home</a> 
+        <a href ="/database"> Database</a> 
+        <a href="/login">Sign In/Register</a>
+        <form method="GET" action="search">
+          <input type="search" name="query" placeholder="Search Game Titles or Users.."><br>
+          <button type="submit" value="Search">Search</button>
+          <select name="search_select">
+                            <option value="user">Users</option>
+                            <option value="game">Games</option>
+                        </select>
+        </form>
      </div>
     </div>
 <!--Container for things below-->
@@ -25,14 +35,13 @@
     <img id = "gamepic" src="https://i.ytimg.com/vi/90okTocF9DM/maxresdefault.jpg">
     </div>
     <div class ="info_space">
-    <b><p>Title:</p></b><span id = "title">Default Game </span>
+    <b><p>Rating:</p></b><span id = "publisher">100</span>
     <b><p>Publisher:</p></b><span id = "publisher">Default Game </span>
     <b><p>Developer:</p></b><span id = "developer">BethEAsoft</span>
     <b><p>Year Published:</p></b><span id = "year_published">Default Game </span>
-
     </div>
     <div class ="title_space">
-      <h1 id="game_title">Lorem Ipsum</h1>
+      <h1 id="game_title">Game Title</h1>
     </div>
     <div id = "main-content" class="main-content">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pulvinar vel quam sed porttitor. Donec sodales eget est quis eleifend. Vestibulum lacinia suscipit molestie.
@@ -54,14 +63,24 @@
     <div class = "comments">
       <p id="curr_comments"></p>
       <div id = "comments">
-      <textarea rows="4" cols="80">
+      <form method="POST" action="review">
+        Title:
+            <input type = "text" name="title" placeholder = "Review Title">
+        Rating out of 100: <input type="number" name="rating" min="0" max="100" value="100"></input><br>
+        <textarea name="review" rows="4" cols="80">
       </textarea>
-      <button>Something somethng</button>
+        <button>Rate & Review</button>
+      </form>
+      
       </div>
     </div>
 
     <div class="latest_comments">
-      <div id = "latest_comments"><b>Latest Comments</b></div>
+      <div id = "latest_comments">
+        <b>Latest Reviews</b><br>
+        <a href="/review">Great game. Would recommend.</a>
+      </div>
+      
     </div id = "insertion point">
 
 

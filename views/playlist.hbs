@@ -9,25 +9,36 @@
     <div id ="filter"></div>
     <div class = "header">
       <!--Header image here-->
-      <img src="https://github.com/noxiousHellcat/IGDB/blob/master/images/IGDB.png?raw=true" height="75" width="200">
-      <div id ="links"> <a href ="home.html"> Home</a> <a href="login.html">Sign In/Register</a>
-        <input type="search" placeholder="Search Game Titles..">
+      <img src="images/IGDB.png" height="75" width="200">
+      <div id ="links">
+        <a href ="/"> Home</a> 
+        <a href ="/database"> Database</a> 
+        <a href="/login">Sign In/Register</a>
+        <form method="GET" action="search">
+          <input type="search" name="query" placeholder="Search Game Titles or Users.."><br>
+          <button type="submit" value="Search">Search</button>
+          <select name="search_select">
+                            <option value="user">Users</option>
+                            <option value="game">Games</option>
+                        </select>
+        </form>
      </div>
     </div>
       
     </div>
     <div class="page">
       <div class="playground"> 
-          <a id = "return" href = "">Return</a>
+          <a id = "return" href = "/user_page">Return</a>
       </div>
       <div class="playsholder">
-      <h1>Playlists</h1>
+      <h1>Playlist</h1>
+      Description
       </div>
       <div class="playarea">
       
       </div>
       <div class="playbutton"> 
-        <button id="addnew">Add New</button>
+        <button id="addnew">Add Game</button>
       </div>
 
       <div id="makenew" class="modal">
@@ -36,15 +47,16 @@
         <div class="modal-content">
           <span class="close">&times;</span>
           <div class = "forms">
-            <div class ="form_title"><h1>Add new Playlist</h1></div>
-            <form class = "form_form" id = "form_form">
-            <p>Playlist Name</p>
-            <input type = "text" id = "play_title" placeholder = "Playlist name">
-            <p>Playlist Description </p>
-            <input type = "text" id = "play_desc" placeholder = "Playlist Description">
+            <div class ="form_title"><h1>Add new Game</h1></div>
+            <form class = "form_form" id = "form_form" method="POST" action="playlist_add">
+            <select name="game">
+                            <option value="user">Game 1</option>
+                            <option value="game">Game 2</option>
+                            <option value="game">Game 3</option>
+                        </select><br>
+            <button id = "submit">Submit</button>
           </form>
           <br>
-            <button id = "submit">Submit</button>
         </div>
       
       </div>
