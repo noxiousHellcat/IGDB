@@ -71,6 +71,12 @@ app.get("/playlist", urlencoder, (req,res)=>{
     res.render("playlist.hbs", {})
 })
 
+app.get("/review", urlencoder, (req,res)=>{
+    //view a review
+
+    res.render("review.hbs", {})
+})
+
 app.post("/game", urlencoder, (req,res)=>{
     //create a game
     let title = req.body.title
@@ -88,7 +94,7 @@ app.post("/comment", urlencoder, (req,res)=>{
     let comment = req.body.comment
     let user_id = req.body.user_id
 
-    res.render("game.hbs", {})
+    res.render("review.hbs", {})
 })
 
 app.post("/review", urlencoder, (req,res)=>{
@@ -99,7 +105,7 @@ app.post("/review", urlencoder, (req,res)=>{
     let rating = req.body.rating
     let review = req.body.review
 
-    res.render("game.hbs", {})
+    res.render("review.hbs", {})
 })
 
 app.post("/playlist", urlencoder, (req,res)=>{

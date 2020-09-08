@@ -44,7 +44,7 @@ body{
     margin-top: 10px;
     margin-bottom: 2px;
     background-color: whitesmoke;
-    height: 91%;
+    height: 100%;
     width: 100%;
     border: solid black 2px;
     border-radius: 12px;
@@ -97,24 +97,23 @@ body{
 }
 .title_space {
   margin-top: 20px;
-  grid-area: 1 / 2 / 2 / 5;
+  grid-area: 1 / 2 / 2 / 10;
  }
  #game_title
  {
    border: solid black 1px;
    background-color: white;
    box-shadow: 5px 5px rgba(68, 68, 68, 0.5);
-
    border-radius: 10px;
  }
 .main-content {
-  margin-top: 10px;
- grid-area:  2 / 4 / 6 / 8; 
+
+ grid-area:  2 / 4 / 6 / 10; 
  overflow-y:hidden;
  border: solid black 1px;
  background-color: white;
  box-shadow: 5px 5px rgba(68, 68, 68, 0.5);
-
+height: auto;
  border-radius: 10px;
 padding: 10px;}
 
@@ -122,7 +121,7 @@ padding: 10px;}
 {
   background-color: white;
   margin-top: 40px;
-  grid-area:6 / 4 / 8 / 10;
+  grid-area:11 / 4 / 12 / 10;
   border: solid black 1px;
   box-shadow: 5px 5px rgba(68, 68, 68, 0.5);
   border-radius: 10px;
@@ -140,8 +139,9 @@ padding: 10px;}
 
 .latest_comments
 {
+  margin-top: 10px;
   background-color: white;
-  grid-area: 2 / 8 / 5 / 10;
+  grid-area: 6 / 4 / 10 / 10;
   border: solid black 1px;
   box-shadow: 5px 5px rgba(68, 68, 68, 0.5);
   border-radius: 10px;

@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-      <link rel="stylesheet" type="text/css" href="css/game.css">
+      <link rel="stylesheet" type="text/css" href="css/review.css">
     <title id = "igdb_title">IGDB - </title>
   </head>
   <body>
@@ -25,23 +25,18 @@
     </div>
 <!--Container for things below-->
     <div class = "page">
-      <!--Empty background Space-->
-    <div class ="blnkspce">
-    </div>
-    <div class ="bckgrnd-content">
-    </div>
-
     <div class ="gamepic_space">
     <img id = "gamepic" src="https://i.ytimg.com/vi/90okTocF9DM/maxresdefault.jpg">
     </div>
     <div class ="info_space">
-    <b><p>Rating:</p></b><span id = "publisher">100</span>
+    <b><p>Title:</p></b><span id = "title">Default Game </span>
     <b><p>Publisher:</p></b><span id = "publisher">Default Game </span>
     <b><p>Developer:</p></b><span id = "developer">BethEAsoft</span>
     <b><p>Year Published:</p></b><span id = "year_published">Default Game </span>
+
     </div>
     <div class ="title_space">
-      <h1 id="game_title">Game Title</h1>
+      <h1 id="game_title">Great game. Would recommend.</h1>
     </div>
     <div id = "main-content" class="main-content">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pulvinar vel quam sed porttitor. Donec sodales eget est quis eleifend. Vestibulum lacinia suscipit molestie.
@@ -58,31 +53,28 @@
       Vivamus at libero pellentesque mi aliquet sollicitudin. Mauris ex enim, cursus non mollis ut, egestas eget leo. Sed viverra risus libero, et
       accumsan velit rhoncus vitae. Aenean nunc nisi, semper vel scelerisque at, imperdiet a nisi. Pellentesque habitant morbi tristique senectus et
        netus et malesuada fames ac turpis egestas. Cras quis sem augue. Curabitur rutrum lorem lorem.
+       <br>
+       <h3>100/100</h3>
     </div>
 
     <div class = "comments">
       <p id="curr_comments"></p>
       <div id = "comments">
-      <form method="POST" action="review">
-        Rating out of 100: <input type="number" name="rating" min="0" max="100" value="100"></input><br>
-        <textarea name="review" rows="4" cols="80">
+      <form method="POST" action="comment">
+      <textarea name="comment" rows="4" cols="80">
       </textarea>
-        <button>Rate & Review</button>
+      <button type="submit">Comment</button>
       </form>
-      
       </div>
     </div>
 
     <div class="latest_comments">
-      <div id = "latest_comments">
-        <b>Latest Reviews</b><br>
-        <a href="/review">Great game. Would recommend.</a>
-      </div>
-      
-    </div id = "insertion point">
+      <div id = "latest_comments"><b>Latest Comments</b></div>
+    <div id = "insertion point">
 
 
     </div>
-
+    </div>
+    </div>
   </body>
 </html>
