@@ -7,10 +7,17 @@
       <div class = "header"><!--Header image here-->
           <img src="https://github.com/noxiousHellcat/IGDB/blob/master/images/IGDB.png?raw=true" height="75" width="200">
           <div id ="links">
-              <a href ="home.html"> Home</a>
-              <a href ="news">News</a>
-              <a href="login.html">Sign In/Register</a>
-              <input type="search" placeholder="Search Game Titles..">
+            <a href ="/"> Home</a> 
+            <a href ="/database"> Database</a> 
+            <a href="/login">Sign In/Register</a>
+            <form method="GET" action="search">
+              <input type="search" name="query" placeholder="Search Game Titles or Users.."><br>
+              <button type="submit" value="Search">Search</button>
+              <select name="search_select">
+                                <option value="user">Users</option>
+                                <option value="game">Games</option>
+                            </select>
+            </form>
           </div>
       </div>
         <div class = "page">

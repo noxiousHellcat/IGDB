@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/css/home.css">
+        <title>IGDB - My Profile</title>
+    </head>
+<body>
+<div class = "page"> --
+  <div class = "header">
+    <!--Header image here-->
+    <img src="images/IGDB.png" height="75" width="200">
+    <div id ="links">
+        <a href ="/"> Home</a> 
+        <a href ="/database"> Database</a> 
+        <a href="/login">Sign In/Register</a>
+      <form method="GET" action="search">
+          <input type="search" name="query" placeholder="Search Game Titles or Users.."><br>
+          <button type="submit" value="Search">Search</button>
+          <select name="search_select">
+            <option value="user">Users</option>
+            <option value="game">Games</option>
+          </select>
+      </form>
+    </div>
+  </div>
+  <div class="cards">
+      <div class = "gamecard">
+        <a href="/game"><h3 id="game_title">Game Title here</h3></a>
+        <b>Genre:</b> <p id = "game_genre">All of them</p>
+        <b>Developer:</b> <p id ="game_dev">EABethsoft</p>
+        <b>Date Released:</b> <p id ="game_date">August 2020</p>
+        <p id = "game_desc">If this were a real website at the moment there would be some comprehensive text here</p>
+      </div>
+      <div class = "gamecard">
+        <a href="/game"><h3 id="game_title">Game Title here</h3></a>
+        <b>Genre:</b> <p id = "game_genre">All of them</p>
+        <b>Developer:</b> <p id ="game_dev">EABethsoft</p>
+        <b>Date Released:</b> <p id ="game_date">August 2020</p>
+        <p id = "game_desc">If this were a real website at the moment there would be some comprehensive text here</p>
+      </div>
+      <div class = "gamecard">
+        <a href="/game"><h3 id="game_title">Game Title here</h3></a>
+        <b>Genre:</b> <p id = "game_genre">All of them</p>
+        <b>Developer:</b> <p id ="game_dev">EABethsoft</p>
+        <b>Date Released:</b> <p id ="game_date">August 2020</p>
+        <p id = "game_desc">If this were a real website at the moment there would be some comprehensive text here</p>
+      </div>
+  </div>
+	<br>
+</div>
+</div>
+
+	<script src = "/js/home.js"></script>
+</body>
+</html>

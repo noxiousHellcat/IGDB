@@ -7,7 +7,7 @@ let Game = mongoose.model("game", {
     developer: String,
     year: Number,
     description: String,
-    review_id = [String]
+    review_id: [String]
 })
 
 module.exports = {
