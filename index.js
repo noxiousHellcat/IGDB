@@ -118,6 +118,13 @@ app.post("/playlist", urlencoder, (req,res)=>{
     res.render("playlist.hbs", {})
 })
 
+app.post("/playlist_add", urlencoder, (req,res)=>{
+    //create a playlist
+    let game = req.body.game
+    
+    res.render("playlist.hbs", {})
+})
+
 app.post("/login", urlencoder, (req,res)=>{
     //user log in
     if(req.body.username==="admin" && req.body.password==="1234"){

@@ -37,8 +37,8 @@
       <div class="playarea">
       
       </div>
-      {{!-- <div class="playbutton"> 
-        <button id="addnew">Add New</button>
+      <div class="playbutton"> 
+        <button id="addnew">Add Game</button>
       </div>
 
       <div id="makenew" class="modal">
@@ -47,16 +47,12 @@
         <div class="modal-content">
           <span class="close">&times;</span>
           <div class = "forms">
-            <div class ="form_title"><h1>Add new Playlist</h1></div>
-            <form class = "form_form" id = "form_form" method="POST" action="playlist">
-            <p>Playlist Name</p>
-            <input type = "text" id = "play_title" placeholder = "Playlist name">
-            <p>Playlist Description </p>
-            <input type = "text" id = "play_desc" placeholder = "Playlist Description">
-            <p>Playlist Visibility </p>
-            <select name="private">
-                            <option value="user">Public</option>
-                            <option value="game">Private</option>
+            <div class ="form_title"><h1>Add new Game</h1></div>
+            <form class = "form_form" id = "form_form" method="POST" action="playlist_add">
+            <select name="game">
+                            <option value="user">Game 1</option>
+                            <option value="game">Game 2</option>
+                            <option value="game">Game 3</option>
                         </select><br>
             <button id = "submit">Submit</button>
           </form>
@@ -67,7 +63,7 @@
     </div> 
 
    
-   --}}
+  
   <script src = "js/playlist.js"></script>
   </body>
 </html>
