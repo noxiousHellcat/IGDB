@@ -1,3 +1,16 @@
+@import "/node_modules/pixel-borders/src/styles/pixel-borders.scss";
+@font-face{
+  font-family: 'kongtext';
+  src: url("fonts/kongtext.ttf") format("truetype");
+}
+@font-face{
+  font-family: 'P2S';
+  src: url("fonts/PressStart2P-Regular.ttf") format("truetype");
+}
+@font-face{
+  font-family: 'VCR';
+  src: url("fonts/VCR_OSD.ttf") format("truetype");
+}
 * {
   box-sizing: border-box;
 }
@@ -7,21 +20,24 @@ body{
     background-color:white;
     background-size: cover;
     background-position: center;
-    font-family:monospace;
+    position: absolute;
+   
   }
   .page
   {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
     grid-column-gap: 10px;
     grid-row-gap: 10px;
+    background-color:black;
   }
   .header {
     background-color:whitesmoke;
-    grid-area: 1 / 1 / 2 / 6;
-    height:100%;
+    height:fit-content;
     border-bottom:solid black;
-    border-radius: 7px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     background-color: rebeccapurple;
@@ -42,45 +58,44 @@ body{
     grid-area: 1/5 ;
   }
 
-
-
-.trending {
-	grid-area: 2 / 1 / 2 / 6;
+#trending {
+  margin-top: 1em;
+  margin-left: 1em;
+  margin-right: 1em;
+	grid-area:  1 / 1 / 5 / 9;
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
 	grid-template-rows: repeat(1, 1fr);
 	grid-column-gap: 10px;
-	grid-row-gap: 0px;
+  grid-row-gap: 0px;
+  font-family: 'VCR', Fallback, sans-serif;
+  font-size: 1em;
+  
 }
 
 .leftt{
-	grid-area: 2 / 1 / 4 / 4;
+	grid-area: 2 / 1 / 4 / 6;
   display: grid;
 	grid-template-columns: repeat(5, 1fr);
 	background-color: #E7DFDF;
   padding:3em;
 	border:solid black;
-	border-radius: 12px;
+  border-radius: 12px;
+  
+
 }
+
+
 .gamepic
 {
   grid-area: 1 / 1 / 2 / 4;
+
 }
 .gamedesc
 {
+  font-family: 'VCR', Fallback, sans-serif;
   padding-top: 3em;
   grid-area: 1 / 4 / 2 / 6;
-}
-.cards
-{
-  width:1000px;
-  height:auto;
-}
-.gamecard
-{
-  width:300px;
-  margin:10px;
-  float:left;
 }
 /* Next & previous buttons */
 .prev, .next {
@@ -112,7 +127,7 @@ body{
 
 /* Caption text */
 .text {
-  color: #black;
+  color: black;
   font-size: 15px;
   padding: 8px 12px;
   bottom: 8px;
@@ -122,7 +137,7 @@ body{
 
 /* Number text (1/3 etc) */
 .numbertext {
-  color: #black;
+  color: black;
   font-size: 12px;
   padding: 8px 12px;
   position: absolute;
@@ -167,3 +182,136 @@ body{
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
 }
+
+
+#release-container{
+  grid-area:5 / 1 / 9 / 7;
+  margin: 1em;
+  font-family: 'VCR', Fallback, sans-serif;
+  font-size: 1em;
+	display: grid;
+	grid-template-columns: repeat(8, 1fr);
+	grid-template-rows: repeat(8, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 0px;
+
+}
+#releases
+{
+  grid-area: 1 / 1 / 9 / 9;
+  
+  border: solid black;
+  border-radius: 15px;
+  background-color:  #E7DFDF;
+  box-shadow: inset 0px 0px 10px 10px  rgba(122,122,122,0.8);  
+}
+
+.reviews{
+  
+  border: solid black;
+  border-radius: 15px;
+  background-color: #E7DFDF; /*#E7DFDF;*/
+  color: black;
+  box-shadow: inset 0px 0px 10px 10px  rgba(122,122,122,0.8); 
+  overflow-y: scroll;
+    white-space: nowrap;
+    
+}
+#reviews .reviews{
+  display: inline-block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+#reviews{
+  display: grid;
+  font-family: 'VCR', Fallback, sans-serif;
+  font-size: 1em;
+  grid-area: 5 / 7 / 9 / 9; 
+  margin: 1em;
+}
+
+#title{
+  margin: 2em;
+  margin-left: 3em;
+}
+
+.card {
+  color: white;
+  background-color: rebeccapurple;
+  float: left;
+  width: calc(25% - 20px);
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
+  height: 200px;
+  font-family: 'VCR', Fallback, sans-serif; 
+}
+.card:hover {
+  box-shadow:0px 0px 5px 5px rgba(0,0,0,0.6);
+  
+  -webkit-transform: translate(-2px, -2px);
+  transition: transform 0.1s;
+}
+.card p {
+  font-size: 18px;
+}
+.cardContainer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.cardContainer{
+  margin: 1em;
+}
+.revcard {
+  color: white;
+  background-color: rebeccapurple;
+  float: center;
+  word-break: break-all;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
+  overflow: hidden;
+  font-family: 'VCR', Fallback, sans-serif; 
+}
+.revcard:hover {
+  box-shadow:0px 0px 5px 5px rgba(0,0,0,0.6);
+  
+  -webkit-transform: translate(-2px, -2px);
+  transition: transform 0.1s;
+}
+.review-container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/*from https://css-tricks.com/line-clampin/*/
+.overflow {
+  --max-lines: 3;
+  position: relative;
+  max-height: calc(var(--lh) * var(--max-lines));
+  overflow: hidden;
+  padding-right: 1rem; /* space for ellipsis */
+}
+.overflow::before {
+  position: absolute;
+  content: "<a href = "">see full comment</a>";
+/*   inset-block-end: 0;
+  inset-inline-end: 0; */
+  bottom: 0;
+  right: 0;
+}
+.overflow::after {
+  content: "";
+  position: absolute;
+/*   inset-inline-end: 0; */
+  right: 0;
+  width: 1rem;
+  height: 1rem;
+  background: white;
+}
+

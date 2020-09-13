@@ -1,86 +1,98 @@
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="css/home.css">
+      <link rel="stylesheet" href="/node_modules/nes.css/css/nes.css">
+        <link rel="stylesheet" type="text/css" href="/public/css/home.css">
+        
         <title>IGDB - My Profile</title>
     </head>
 <body>
-<div class = "page"> --
-  <div class = "header">
+<div class = "header">
     <!--Header image here-->
-    <img src="https://github.com/noxiousHellcat/IGDB/blob/master/images/IGDB.png?raw=true" height="75" width="200">
-    <div id ="links"> <a href ="home.html"> Home</a> <a href="login.html">Sign In/Register</a>
-      <input type="search" placeholder="Search Game Titles..">
+    <img src="images/IGDB.png" height="75" width="200">
+    <div id ="links">
+        <a href ="/"> Home</a> 
+        <a href ="/database"> Database</a> 
+        <a href="/login">Sign In/Register</a>
+      <form method="GET" action="search">
+          <input type="search" name="query" placeholder="Search Game Titles or Users.."><br>
+          <button type="submit" value="Search">Search</button>
+          <select name="search_select">
+                            <option value="user">Users</option>
+                            <option value="game">Games</option>
+                        </select>
+      </form>
     </div>
   </div>
-  <div class="trending">
+<div class = "page"> 
+  <div class = "nes-container is-rounded" id="trending">
     <div class ="leftt">
       <div class = "gamepic">
     <h1>Trending Right now</h1>
         <div class="tgame fade">
-          <div class="numbertext">1 / 10</div>
+          <!--<div class="numbertext">1 / 10</div>-->
           <img src="images/background.png" style="width:50%">
           <div class="text">Some game 1</div>
           <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
           <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
         <div class="tgame fade">
-          <div class="numbertext">2 / 10</div>
+            <!--<div class="numbertext">2 / 10</div>-->
           <img src="images/background.png" style="width:50%">
           <div class="text">Some game 2</div>
           <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
           <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
         <div class="tgame fade">
-          <div class="numbertext">3 / 10</div>
+          <!--<div class="numbertext">3 / 10</div>-->
           <img src="images/background.png" style="width:50%">
           <div class="text">Some game 3</div>
           <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
           <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
         <div class="tgame fade">
-          <div class="numbertext">4 / 10</div>
+          <!-- <div class="numbertext">4 / 10</div>-->
           <img src="images/background.png" style="width:50%">
           <div class="text">Some game 4</div>
           <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
           <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
         <div class="tgame fade">
-          <div class="numbertext">5 / 10</div>
+          <!--<div class="numbertext">5 / 10</div>-->
           <img src="images/background.png" style="width:50%">
           <div class="text">Some game 5</div>
           <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
           <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
         <div class="tgame fade">
-          <div class="numbertext">6 / 10</div>
+           <!--<div class="numbertext">6 / 10</div>-->
           <img src="images/background.png" style="width:50%">
           <div class="text">Some game 6</div>
           <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
           <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
         <div class="tgame fade">
-          <div class="numbertext">7 / 10</div>
+           <!--<div class="numbertext">7 / 10</div>-->
           <img src="images/background.png" style="width:50%">
           <div class="text">Some game 7</div>
           <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
           <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
         <div class="tgame fade">
-          <div class="numbertext">8 / 10</div>
+           <!--<div class="numbertext">8 / 10</div>-->
           <img src="images/background.png" style="width:50%">
           <div class="text">Some game 8</div>
           <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
           <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
         <div class="tgame fade">
-          <div class="numbertext">9 / 10</div>
+           <!--<div class="numbertext">9 / 10</div>-->
           <img src="images/background.png" style="width:50%">
           <div class="text">Some game 9</div>
           <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
           <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
         <div class="tgame fade">
-          <div class="numbertext">10 / 10</div>
+           <!--<div class="numbertext">10 / 10</div>-->
           <img src="images/background.png" style="width:50%">
           <div class="text">Some game 10</div>
           <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -111,10 +123,15 @@
 </div>
 
 	</div>
+
 	<br>
+
+  <div class = "nes-container is-rounded" id = "releases">
+    Something inside
+  </div>
 </div>
 </div>
 
-	<script src = "js/home.js"></script>
+	<script src = "/js/home.js"></script>
 </body>
 </html>
