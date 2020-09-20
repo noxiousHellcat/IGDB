@@ -1,0 +1,181 @@
+@import "/node_modules/pixel-borders/src/styles/pixel-borders.scss";
+
+@font-face{
+  font-family: 'Gravity';
+  src: url("fonts/Gravity-Book.otf") format("truetype");
+}
+@font-face{
+  font-family: 'VCR';
+  src: url("fonts/VCR_OSD.ttf") format("truetype");
+}
+* {
+  box-sizing: border-box;
+
+}
+#links button{
+  width: fit-content;
+  height: fit-content;
+}
+#links select{ width:fit-content}
+body{
+    margin: 0;
+    padding: 0;
+    background-color:white;
+    background-size: cover;
+    background-position: center;
+
+   
+    
+  }
+  .page
+  {
+    display: grid;
+    height: 100vh;
+    position: absolute;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    background-color:#E7DFDF;
+    grid-auto-flow: column;
+    grid-auto-columns: 300px 100px;
+    grid-template-columns: repeat(5, 1fr);
+     grid-template-rows: repeat(5, 1fr);
+    
+  }
+  .header {
+    background-color:whitesmoke;
+    height:fit-content;
+    border-bottom:solid black;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    background-color: rebeccapurple;
+  }
+  .header a{
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    font-family: 'VCR', Fallback, sans-serif;
+    color:white;
+    float: center;
+  }
+  .header button,form,#search
+  {
+    font-family: 'VCR', Fallback, sans-serif;
+  }
+  
+  .header a:hover
+  {
+    color: greenyellow;
+  }
+
+  .header img{
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+
+  #links
+  {
+    grid-area: 1/5 ;
+  }
+
+
+
+  #search_bar
+  {
+    background-color:rebeccapurple;
+    margin: 10px;
+    grid-area: 1 / 1 / 6 / 2; 
+    font-family: 'Gravity', Fallback, sans-serif; 
+    color: white;
+    font-size: 1vw;
+    overflow: hidden;
+  }
+
+  
+  #search_bar p,h3,input
+  {
+    font-family: 'Gravity', Fallback, sans-serif; 
+    margin-left: 20px;
+  }
+
+
+  #insertion_point{
+    grid-area: 1 / 2 / 6 / 7; 
+    display:grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
+    grid-auto-rows: auto;
+    grid-gap:1em ;    
+    margin: 10px;
+    overflow-y: auto;
+    background-color:whitesmoke;
+    
+  }
+  #insertion_point:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+.gamecard {
+  color: white;
+  background-color: rebeccapurple;
+  padding: 7px;
+  border-radius: 10px;
+  margin: 10px;
+  height: 200px;
+  min-height:199px ;
+  font-family: 'Gravity', Fallback, sans-serif; 
+  font-size: 1.3vh;
+  border: solid rgba(0,0,0,0.8); ;
+
+}
+
+.gamecard a{color: white;}
+
+.gamecard:hover {
+  box-shadow:4px 4px 2px 0px rgba(122,122,122,0.8);
+  
+  -webkit-transform: translate(-2px, -2px);
+  transition: transform 0.1s;
+}
+
+
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  margin-top: 10px;
+  display: none;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #d16fd8;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b670d7;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #9a36a1;
+}
+::-webkit-scrollbar-track {
+  background: #ffffff;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #eee2e2;
+}
+::-webkit-scrollbar-track:active {
+  background: #dedede;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+

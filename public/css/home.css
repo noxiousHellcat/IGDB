@@ -1,11 +1,8 @@
 @import "/node_modules/pixel-borders/src/styles/pixel-borders.scss";
+
 @font-face{
-  font-family: 'kongtext';
-  src: url("fonts/kongtext.ttf") format("truetype");
-}
-@font-face{
-  font-family: 'P2S';
-  src: url("fonts/PressStart2P-Regular.ttf") format("truetype");
+  font-family: 'Gravity';
+  src: url("fonts/Gravity-Book.otf") format("truetype");
 }
 @font-face{
   font-family: 'VCR';
@@ -14,13 +11,19 @@
 * {
   box-sizing: border-box;
 }
+#links button{
+  width: fit-content;
+  height: fit-content;
+}
+#links select{ 
+  width:fit-content
+}
 body{
     margin: 0;
     padding: 0;
     background-color:white;
     background-size: cover;
     background-position: center;
-    position: absolute;
    
   }
   .page
@@ -32,7 +35,7 @@ body{
     grid-row-gap: 10px;
     background-color:black;
   }
-  .header {
+ .header {
     background-color:whitesmoke;
     height:fit-content;
     border-bottom:solid black;
@@ -46,16 +49,27 @@ body{
     text-decoration: none;
     font-size: 12px;
     line-height: 20px;
+    font-family: 'VCR', Fallback, sans-serif;
     color:white;
     float: center;
   }
+  .header button,form 
+  {
+    font-family: 'VCR', Fallback, sans-serif;
+  }
+  
   .header a:hover
   {
-    color: greenyellow  ;
+    color: greenyellow;
+  }
+
+  .header img{
+    margin-left: 10px;
+    margin-top: 10px;
   }
   #links
   {
-    grid-area: 1/5 ;
+    grid-area: 1/5;
   }
 
 #trending {
@@ -68,9 +82,12 @@ body{
 	grid-template-rows: repeat(1, 1fr);
 	grid-column-gap: 10px;
   grid-row-gap: 0px;
+  font-family: 'Gravity', Fallback, sans-serif;
+  font-size: 1em; 
+}
+
+#head_title {
   font-family: 'VCR', Fallback, sans-serif;
-  font-size: 1em;
-  
 }
 
 .leftt{
@@ -81,6 +98,8 @@ body{
   padding:3em;
 	border:solid black;
   border-radius: 12px;
+  box-shadow: inset 0px 0px 10px 10px  rgba(122,122,122,0.8);  
+
   
 
 }
@@ -93,7 +112,7 @@ body{
 }
 .gamedesc
 {
-  font-family: 'VCR', Fallback, sans-serif;
+  font-family: 'Gravity', Fallback, sans-serif;
   padding-top: 3em;
   grid-area: 1 / 4 / 2 / 6;
 }
@@ -111,7 +130,7 @@ body{
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
-	background-color: black;
+	background-color:rebeccapurple;
 }
 
 /* Position the "next button" to the right */
@@ -187,7 +206,7 @@ body{
 #release-container{
   grid-area:5 / 1 / 9 / 7;
   margin: 1em;
-  font-family: 'VCR', Fallback, sans-serif;
+  font-family: 'Gravity', Fallback, sans-serif;
   font-size: 1em;
 	display: grid;
 	grid-template-columns: repeat(8, 1fr);
@@ -207,15 +226,16 @@ body{
 }
 
 .reviews{
+  display:grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
   
   border: solid black;
   border-radius: 15px;
   background-color: #E7DFDF; /*#E7DFDF;*/
   color: black;
   box-shadow: inset 0px 0px 10px 10px  rgba(122,122,122,0.8); 
-  overflow-y: scroll;
-    white-space: nowrap;
-    
+  white-space: nowrap;
+  min-width: 0;
 }
 #reviews .reviews{
   display: inline-block;
@@ -225,7 +245,7 @@ body{
 }
 #reviews{
   display: grid;
-  font-family: 'VCR', Fallback, sans-serif;
+  font-family: 'Gravity', Fallback, sans-serif;
   font-size: 1em;
   grid-area: 5 / 7 / 9 / 9; 
   margin: 1em;
@@ -245,7 +265,7 @@ body{
   border-radius: 10px;
   margin: 10px;
   height: 200px;
-  font-family: 'VCR', Fallback, sans-serif; 
+  font-family: 'Gravity', Fallback, sans-serif; 
 }
 .card:hover {
   box-shadow:0px 0px 5px 5px rgba(0,0,0,0.6);
@@ -269,18 +289,20 @@ body{
   color: white;
   background-color: rebeccapurple;
   float: center;
-  word-break: break-all;
+    word-break: break-all;
   padding: 10px;
   border-radius: 10px;
   margin: 10px;
+  white-space: nowrap;
   overflow: hidden;
-  font-family: 'VCR', Fallback, sans-serif; 
+  text-overflow: ellipsis;
+  font-family: 'Gravity', Fallback, sans-serif; 
 }
 .revcard:hover {
-  box-shadow:0px 0px 5px 5px rgba(0,0,0,0.6);
+  box-shadow:4px 4px 2px 0px rgba(122,122,122,0.8);
   
   -webkit-transform: translate(-2px, -2px);
-  transition: transform 0.1s;
+  transition: transform 0.3s;
 }
 .review-container:after {
   content: "";
@@ -289,29 +311,38 @@ body{
 }
 
 
-/*from https://css-tricks.com/line-clampin/*/
-.overflow {
-  --max-lines: 3;
-  position: relative;
-  max-height: calc(var(--lh) * var(--max-lines));
-  overflow: hidden;
-  padding-right: 1rem; /* space for ellipsis */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
 }
-.overflow::before {
-  position: absolute;
-  content: "<a href = "">see full comment</a>";
-/*   inset-block-end: 0;
-  inset-inline-end: 0; */
-  bottom: 0;
-  right: 0;
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
 }
-.overflow::after {
-  content: "";
-  position: absolute;
-/*   inset-inline-end: 0; */
-  right: 0;
-  width: 1rem;
-  height: 1rem;
-  background: white;
+::-webkit-scrollbar-thumb {
+  background: #d16fd8;
+  border: 0px none #ffffff;
+  border-radius: 50px;
 }
+::-webkit-scrollbar-thumb:hover {
+  background: #b670d7;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #9a36a1;
+}
+::-webkit-scrollbar-track {
+  background: #ffffff;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #eee2e2;
+}
+::-webkit-scrollbar-track:active {
+  background: #dedede;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
 

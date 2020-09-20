@@ -1,51 +1,259 @@
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="/css/home.css">
+        <link rel="stylesheet" type="text/css" href="/css/database.css">
+        <link rel="stylesheet" type="text/css" href="css/nes.css/css/nes.css">
         <title>IGDB - My Profile</title>
     </head>
 <body>
-<div class = "page"> --
-  <div class = "header">
+
+<div class = "header">
     <!--Header image here-->
     <img src="images/IGDB.png" height="75" width="200">
     <div id ="links">
         <a href ="/"> Home</a> 
         <a href ="/database"> Database</a> 
         <a href="/login">Sign In/Register</a>
-      <form method="GET" action="search">
+      <form method="GET" action="search" id = "search">
           <input type="search" name="query" placeholder="Search Game Titles or Users.."><br>
           <button type="submit" value="Search">Search</button>
           <select name="search_select">
-            <option value="user">Users</option>
-            <option value="game">Games</option>
-          </select>
+                            <option value="user">Users</option>
+                            <option value="game">Games</option>
+              </select>
       </form>
     </div>
   </div>
-  <div class="cards">
-      <div class = "gamecard">
-        <a href="/game"><h3 id="game_title">Game Title here</h3></a>
-        <b>Genre:</b> <p id = "game_genre">All of them</p>
-        <b>Developer:</b> <p id ="game_dev">EABethsoft</p>
-        <b>Date Released:</b> <p id ="game_date">August 2020</p>
-        <p id = "game_desc">If this were a real website at the moment there would be some comprehensive text here</p>
-      </div>
-      <div class = "gamecard">
-        <a href="/game"><h3 id="game_title">Game Title here</h3></a>
-        <b>Genre:</b> <p id = "game_genre">All of them</p>
-        <b>Developer:</b> <p id ="game_dev">EABethsoft</p>
-        <b>Date Released:</b> <p id ="game_date">August 2020</p>
-        <p id = "game_desc">If this were a real website at the moment there would be some comprehensive text here</p>
-      </div>
-      <div class = "gamecard">
-        <a href="/game"><h3 id="game_title">Game Title here</h3></a>
-        <b>Genre:</b> <p id = "game_genre">All of them</p>
-        <b>Developer:</b> <p id ="game_dev">EABethsoft</p>
-        <b>Date Released:</b> <p id ="game_date">August 2020</p>
-        <p id = "game_desc">If this were a real website at the moment there would be some comprehensive text here</p>
-      </div>
+
+<div class = "page"> 
+  <div class = "nes-container is-rounded" id ="search_bar">
+    <h3>Search</h3>
+    <p>Name: </p>
+    <input type = "search">
+    <h3>Tags:</h3>
+    <form>
+      <input type="checkbox" name="genre_01" value="action">
+      <label for="genre_01">Action</label><br>
+      <input type="checkbox" name="genre_02" value="adventure">
+      <label for="genre_02">Adventure</label><br>
+      <input type="checkbox" name="genre_03" value="arcade">
+      <label for="genre_03">Arcade</label><br>
+      <input type="checkbox" name="genre_04" value="beatemup">
+      <label for="genre_04">Beat'em up</label><br>
+      <input type="checkbox" name="genre_05" value="casual">
+      <label for="genre_05">Casual</label><br>
+      <input type="checkbox" name="genre_06" value="competitive">
+      <label for="genre_06">Competitive</label><br>
+      <input type="checkbox" name="genre_07" value="cooperative">
+      <label for="genre_07">Cooperative</label><br>
+      <input type="checkbox" name="genre_08" value="fighting">
+      <label for="genre_08">Fighting</label><br>
+      <input type="checkbox" name="genre_09" value="firstperson">
+      <label for="genre_09">First Person</label><br>
+      <input type="checkbox" name="genre_10" value="horror">
+      <label for="genre_10">Horror</label><br>
+      <input type="checkbox" name="genre_11" value="rts">
+      <label for="genre_11">RTS</label><br>
+      <input type="checkbox" name="genre_12" value="rtt">
+      <label for="genre_12">RTT</label><br>
+      <input type="checkbox" name="genre_13" value="rpg">
+      <label for="genre_13">Roleplaying</label><br>
+      <input type="checkbox" name="genre_14" value="roguelike">
+      <label for="genre_14">Roguelike</label><br>
+      <input type="checkbox" name="genre_15" value="simulation">
+      <label for="genre_15">Simulation</label><br>
+      <input type="checkbox" name="genre_16" value="shooter">
+      <label for="genre_16">Shooter</label><br>
+      <br>
+      <input type="submit" value="Submit">
+    </form>
+    <br>
+    <p></p>
   </div>
-	<br>
+  <div id = "insertion_point" class="nes-container is-rounded">
+    <!--Dynamically adjust per content, Will scroll-->
+      <div class = "gamecard" id = "game1">
+        <a href="/game"><h3 id="game_title1">Game Title here</h3></a>
+        <b>Date Released:</b> <p id ="game_date1">August 2020</p>
+        <b>Developer:</b> <p id ="game_dev1">EABethsoft</p>
+        <b>Date Released:</b> <p id ="game_date1">August 2020</p>  
+      </div>
+
+      <div class = "gamecard" id ="game2">
+        <a href="/game"><h3 id="game_title2">Game Title here</h3></a>
+        <b>Genre:</b> <p id = "game_genre2">All of them</p>
+        <b>Developer:</b> <p id ="game_dev2">EABethsoft</p>
+        <b>Date Released:</b> <p id ="game_date2">August 2020</p>
+      </div>
+
+      <div class = "gamecard" id ="game3">
+        <a href="/game"><h3 id="game_title3">Game Title here</h3></a>
+        <b>Genre:</b> <p id = "game_genre3">All of them</p>
+        <b>Developer:</b> <p id ="game_dev3">EABethsoft</p>
+        <b>Date Released:</b> <p id ="game_date3">August 2020</p>
+      </div>
+
+      <div class = "gamecard" id ="game4">
+        <a href="/game"><h3 id="game_title4">Game Title here</h3></a>
+        <b>Genre:</b> <p id = "game_genre4">All of them</p>
+        <b>Developer:</b> <p id ="game_dev4">EABethsoft</p>
+        <b>Date Released:</b> <p id ="game_date4">August 2020</p>
+      </div>
+
+      <div class = "gamecard" id ="game5">
+        <a href="/game"><h3 id="game_title5">Game Title here</h3></a>
+        <b>Genre:</b> <p id = "game_genre5">All of them</p>
+        <b>Developer:</b> <p id ="game_dev5">EABethsoft</p>
+        <b>Date Released:</b> <p id ="game_date5">August 2020</p>
+      </div>
+
+      <div class = "gamecard" id ="game6">
+        <a href="/game"><h3 id="game_title6">Game Title here</h3></a>
+        <b>Genre:</b> <p id = "game_genre6">All of them</p>
+        <b>Developer:</b> <p id ="game_dev6">EABethsoft</p>
+        <b>Date Released:</b> <p id ="game_date6">August 2020</p>
+      </div>
+
+      <div class = "gamecard" id ="game7">
+        <a href="/game"><h3 id="game_title7">Game Title here</h3></a>
+        <b>Genre:</b> <p id = "game_genre7">All of them</p>
+        <b>Developer:</b> <p id ="game_dev7">EABethsoft</p>
+        <b>Date Released:</b> <p id ="game_date7">August 2020</p>
+      </div>
+
+      <div class = "gamecard" id ="game8">
+        <a href="/game"><h3 id="game_title8">Game Title here</h3></a>
+        <b>Genre:</b> <p id = "game_genre8">All of them</p>
+        <b>Developer:</b> <p id ="game_dev8">EABethsoft</p>
+        <b>Date Released:</b> <p id ="game_date8">August 2020</p>
+      </div>
+
+      <div class = "gamecard" id ="game9">
+        <a href="/game"><h3 id="game_title9">Game Title here</h3></a>
+        <b>Genre:</b> <p id = "game_genre9">All of them</p>
+        <b>Developer:</b> <p id ="game_dev9">EABethsoft</p>
+        <b>Date Released:</b> <p id ="game_date9">August 2020</p>
+      </div>
+
+      <div class = "gamecard" id ="game10">
+        <a href="/game"><h3 id="game_title10">Game Title here</h3></a>
+        <b>Genre:</b> <p id = "game_genre10">All of them</p>
+        <b>Developer:</b> <p id ="game_dev10">EABethsoft</p>
+        <b>Date Released:</b> <p id ="game_date10">August 2020</p>
+      </div>
+
+      <div class = "gamecard" id ="game11">
+        <a href="/game"><h3 id="game_title11">Game Title here</h3></a>
+        <b>Genre:</b> <p id = "game_genre11">All of them</p>
+        <b>Developer:</b> <p id ="game_dev11">EABethsoft</p>
+        <b>Date Released:</b> <p id ="game_date11">August 2020</p>
+      </div>
+
+      <div class = "gamecard" id ="game12">
+        <a href="/game"><h3 id="game_title12">Game Title here</h3></a>
+        <b>Genre:</b> <p id = "game_genre12">All of them</p>
+        <b>Developer:</b> <p id ="game_dev12">EABethsoft</p>
+        <b>Date Released:</b> <p id ="game_date12">August 2020</p>
+      </div>
+
+      <div class = "gamecard" id ="game13"> 
+        <a href="/game"><h3 id="game_title13">Game Title here</h3></a>
+        <b>Genre:</b> <p id = "game_genre13">All of them</p>
+        <b>Developer:</b> <p id ="game_dev13">EABethsoft</p>
+        <b>Date Released:</b> <p id ="game_date13">August 2020</p>
+      </div>
+
+        <div class = "gamecard" id ="game14">
+        <a href="/game"><h3 id="game_title14">Game Title here</h3></a>
+        <b>Genre:</b> <p id = "game_genre14">All of them</p>
+        <b>Developer:</b> <p id ="game_dev14">EABethsoft</p>
+        <b>Date Released:</b> <p id ="game_date14">August 2020</p>
+      </div>
+
+        <div class = "gamecard" id ="game15">
+        <a href="/game"><h3 id="game_title15">Game Title here</h3></a>
+        <b>Genre:</b> <p id = "game_genre15">All of them</p>
+        <b>Developer:</b> <p id ="game_dev15">EABethsoft</p>
+        <b>Date Released:</b> <p id ="game_date15">August 2020</p>
+      </div>
+
+        <div class = "gamecard" id ="game16">
+        <a href="/game"><h3 id="game_title16">Game Title here</h3></a>
+        <b>Genre:</b> <p id = "game_genre16">All of them</p>
+        <b>Developer:</b> <p id ="game_dev16">EABethsoft</p>
+        <b>Date Released:</b> <p id ="game_date16">August 2020</p>
+      </div>
+
+        <div class = "gamecard" id ="game17">
+        <a href="/game"><h3 id="game_title17">Game Title here</h3></a>
+        <b>Genre:</b> <p id = "game_genre17">All of them</p>
+        <b>Developer:</b> <p id ="game_dev17">EABethsoft</p>
+        <b>Date Released:</b> <p id ="game_date17">August 2020</p>
+      </div>
+
+             <div class = "gamecard" id ="game18">
+        <a href="/game"><h3 id="game_title18">Game Title here</h3></a>
+        <b>Genre:</b> <p id = "game_genre18">All of them</p>
+        <b>Developer:</b> <p id ="game_dev18">EABethsoft</p>
+        <b>Date Released:</b> <p id ="game_date18">August 2020</p>
+      </div>
+
+        <div class = "gamecard" id ="game19">
+        <a href="/game"><h3 id="game_title19">Game Title here</h3></a>
+        <b>Genre:</b> <p id = "game_genre19">All of them</p>
+        <b>Developer:</b> <p id ="game_dev19">EABethsoft</p>
+        <b>Date Released:</b> <p id ="game_date19">August 2020</p>
+      </div>
+
+        <div class = "gamecard" id ="game20">
+        <a href="/game"><h3 id="game_title20">Game Title here</h3></a>
+        <b>Genre:</b> <p id = "game_genre20">All of them</p>
+        <b>Developer:</b> <p id ="game_dev20">EABethsoft</p>
+        <b>Date Released:</b> <p id ="game_date20">August 2020</p>
+      </div>
+
+        <div class = "gamecard" id ="game21">
+        <a href="/game"><h3 id="game_title21">Game Title here</h3></a>
+        <b>Genre:</b> <p id = "game_genre21">All of them</p>
+        <b>Developer:</b> <p id ="game_dev21">EABethsoft</p>
+        <b>Date Released:</b> <p id ="game_date21">August 2020</p>
+      </div>
+
+       <div class = "gamecard" id ="game22">
+        <a href="/game"><h3 id="game_title22">Game Title here</h3></a>
+        <b>Genre:</b> <p id = "game_genre22">All of them</p>
+        <b>Developer:</b> <p id ="game_dev22">EABethsoft</p>
+        <b>Date Released:</b> <p id ="game_date22">August 2020</p>
+      </div>
+
+        <div class = "gamecard" id ="game23">
+        <a href="/game"><h3 id="game_title23">Game Title here</h3></a>
+        <b>Genre:</b> <p id = "game_genre23">All of them</p>
+        <b>Developer:</b> <p id ="game_dev23">EABethsoft</p>
+        <b>Date Released:</b> <p id ="game_date23">August 2020</p>
+      </div>
+
+        <div class = "gamecard" id ="game24">
+        <a href="/game"><h3 id="game_title24">Game Title here</h3></a>
+        <b>Genre:</b> <p id = "game_genre24">All of them</p>
+        <b>Developer:</b> <p id ="game_dev24">EABethsoft</p>
+        <b>Date Released:</b> <p id ="game_date24">August 2020</p>
+      </div>
+
+        <div class = "gamecard" id ="game25">
+        <a href="/game"><h3 id="game_title25">Game Title here</h3></a>
+        <b>Genre:</b> <p id = "game_genre25">All of them</p>
+        <b>Developer:</b> <p id ="game_dev25">EABethsoft</p>
+        <b>Date Released:</b> <p id ="game_date25">August 2020</p>
+      </div>
+
+
+      
+
+
+  </div>
+
+
+
 </div>
 </div>
 
