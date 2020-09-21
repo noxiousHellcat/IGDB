@@ -8,6 +8,10 @@
   font-family: 'VCR';
   src: url("fonts/VCR_OSD.ttf") format("truetype");
 }
+html
+{
+  height: 100%;
+}
 * {
   box-sizing: border-box;
 
@@ -23,6 +27,7 @@ body{
     background-color:white;
     background-size: cover;
     background-position: center;
+    height: 100%;
 
    
     
@@ -30,7 +35,7 @@ body{
   .page
   {
     display: grid;
-    height: 100vh;
+    height: 88%;
     position: absolute;
     grid-column-gap: 10px;
     grid-row-gap: 10px;
@@ -43,13 +48,14 @@ body{
   }
   .header {
     background-color:whitesmoke;
-    height:fit-content;
+    height:12%;
     border-bottom:solid black;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     background-color: rebeccapurple;
+
   }
   .header a{
     text-decoration: none;
@@ -96,9 +102,11 @@ body{
   #search_bar p,h3,input
   {
     font-family: 'Gravity', Fallback, sans-serif; 
-    margin-left: 20px;
+    font-size: 1.4vh;
+    
+    align-content: center;
   }
-
+  #search_bar table{font-size: 1.4vh;color: white;}
 
   #insertion_point{
     grid-area: 1 / 2 / 6 / 7; 

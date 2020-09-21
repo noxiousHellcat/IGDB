@@ -114,10 +114,11 @@ body{
   position: fixed;
   grid-area: 3 / 2 / 10 / 10;
   z-index: 2; 
-  width: 40%;
-  height: 40%;
+  width: 70%;
+  height: 70%;
   left: 50%;
   top: 50%;
+  border: solid black;
   transform: translate(-50%, -50%);
   overflow: auto; /* Enable scroll if needed */
   background-color:whitesmoke;

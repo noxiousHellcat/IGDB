@@ -1,7 +1,9 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="/css/logreg.css">
+        <link rel="stylesheet" type="text/css" href="css/nes.css/css/nes.css">
+
         <title>IGDB - Login</title>
     </head>
     <body>
@@ -23,8 +25,8 @@
                     </form>
                 </div>    
             </div>
-        
-        <div class = "log_box">
+    <div class = "nes-container is-rounded" id="page">
+        <div id = "log_box">
             <div id = "box_title">
                 <h2>Something quirky  I don't know</h2>
             </div>
@@ -43,8 +45,50 @@
                     <button id ="for_mdl" value = "Forgot Password">Forgot Password</button>
             </div>
         </div>
+        
+        <div class = "nes-container is-rounded" id = "register">
+            <div id = "box_title">
+                <h2></h2>
+            </div>
+            <div id = "details">
+                <form method="POST" action = "register">
+                <p>Username</p>
+                <input  id = "uname" type="text" name="username" placeholder="Enter Username">
+                <p>E-mail</p>
+                <input  id = "umail" type="email" name="email" placeholder="Enter e-mail">
+                <input  id = "umail2" type="email" name="" placeholder="Confirm e-mail">
+                <p>Password</p>
+                <input id = "pword" type="password" name="password" placeholder="Enter Password">
+                <input id = "pword2" type="password" name="" placeholder="Confrm Password">
+                <br>
+                <p>Birthday</p>
+                <input id = "birth" type="date" name="birthday">
+                <br>
+                <br>
+                <button id ="sub" type="submit" value="register">Register</button>
+                </form>
+            </div>
+
+        </div>
+
+        <div class = "nes-container is-rounded" id = "forgot">
+            <div id = "box_title">
+                <h2>Forgot your password?</h2>
+            </div>
+            <div id = "details">
+                <form method="POST" action = "register">
+                <p>Username</p>
+                <input  id = "uname" type="text" name="username" placeholder="Enter Username">
+                <p>E-mail</p>
+                <input  id = "umail" type="email" name="email" placeholder="Enter E-mail">
+                <button id ="sub" type="submit" value="forgotpassword">Retrieve Password</button>
+                </form>
+            </div>
+        </div>
+
+    </div>        
+        <!--
         <div id="reg_Modal" class="modal">
-            <!-- Modal content -->
             <div class="reg_modal">
                 <span class="close1">&times;</span>
                 <div id = "modal_title">
@@ -71,7 +115,6 @@
           </div>
 
           <div id="forgot_Modal" class="modal">
-            <!-- Modal content -->
             <div class="for_modal">
                 <span class="close2">&times;</span>
                 <div id = "modal_title">
@@ -88,8 +131,8 @@
             </div>
           
           </div>
-        <!---->
-     </div>
+        -->
+    
     <script src="/js/login.js"></script>
     </body>
 </html>
