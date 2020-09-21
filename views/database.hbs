@@ -71,6 +71,16 @@
   </div>
   <div id = "insertion_point" class="nes-container is-rounded">
     <!--Dynamically adjust per content, Will scroll-->
+    <!--Will need to change this to get all game titles from database and render automatically-->
+    <!-- {{#each Game}}
+            <div class = "gamecard" >
+                <a href="/game"><h3>{{this.gametitle}}
+                <p>Genre:</p>{{this.genre}}
+                <p>Developer:</p>{{this.developer}}
+                <p>Date Released:</p>{{this.year}}
+            </div>
+        {{/each}}
+      -->
       <div class = "gamecard" id = "game1">
         <a href="/game"><h3 id="game_title1">Game Title here</h3></a>
         <b>Date Released:</b> <p id ="game_date1">August 2020</p>
