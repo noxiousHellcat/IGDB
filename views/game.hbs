@@ -1,8 +1,10 @@
-</<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
       <link rel="stylesheet" type="text/css" href="css/game.css">
+     <link rel="stylesheet" type="text/css" href="css/nes.css/css/nes.css">
+
     <title id = "igdb_title">IGDB - </title>
   </head>
   <body>
@@ -24,8 +26,54 @@
      </div>
     </div>
 <!--Container for things below-->
-    <div class = "page">
-      <!--Empty background Space-->
+    <div id = "page" class = "nes-container is-rounded">
+   
+
+
+      <div id = "gametitle" class = "nes-container is-rounded">
+        <h3><!--{{title}}--> Game title here</h3>
+      </div>
+
+      <div id = "gamepic" class = "nes-container is-rounded">
+        <img id = "game_pic" src = "https://i.ytimg.com/vi/90okTocF9DM/maxresdefault.jpg">
+      </div>
+
+      <div id = "gamefacts" class = "nes-container is-rounded">
+         <b><p>Publisher:</p></b><span id = "publisher"><!--{{publisher}}-->Default Game </span>
+         <b><p>Developer:</p></b><span id = "developer"><!--{{developer}}-->BethEAsoft</span>
+         <b><p>Year Published:</p></b><span id = "year_published"><!--{{year}}-->Default Game </span>
+         <b><p>Genre/s: </p></b><span id = "genres"><!--{{genre}}--> Action</span>
+      </div>
+
+      <div id = "gamedesc" class = "nes-container is-rounded">
+        <!--{{description}}-->
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pulvinar vel quam sed porttitor. Donec sodales eget est quis eleifend. Vestibulum lacinia suscipit molestie. In nec accumsan orci. In sodales ipsum in consequat consectetur. Curabitur fringilla nulla quis 
+        convallis sagittis. Cras porta dolor ut consequat posuere. Morbi ut eleifend libero. Mauris ut dolor in arcu luctus semper eget id magna.
+        Nam turpis purus, pellentesque fringilla pretium in, tincidunt sit amet massa. Sed vestibulum leo a malesuada commodo. Morbi tincidunt 
+        urna quis risus dictum fermentum. Cras vel dignissim urna. Praesent hendrerit placerat laoreet. Nulla imperdiet nulla at eros condimentum
+        tincidunt. Cras quam elit, viverra elementum dolor vel, ullamcorper consectetur elit. Morbi vel turpis ut sem laoreet imperdiet non in elit.
+        Vestibulum vulputate eget risus id sollicitudin. Nullam non tortor et quam pharetra tristique ut nec nunc. Fusce vitae ullamcorper arcu, nec
+        iaculis tellus. Aliquam a pretium ipsum, vel euismod leo. Sed egestas ex sit amet suscipit vehicula. Donec lectus tellus, dignissim sed leo et, 
+        feugiat aliquam turpis. Aenean imperdiet tincidunt elementum. Integer vitae finibus augue. Praesent fermentum turpis nunc. Integer ultricies lacus
+        at aliquet aliquam. Curabitur tempus nibh ut est mollis, non tincidunt velit blandit. Vivamus at libero pellentesque mi aliquet sollicitudin. Mauris
+        ex enim, cursus non mollis ut, egestas eget leo. Sed viverra risus libero, et accumsan velit rhoncus vitae. Aenean nunc nisi, semper vel scelerisque at,
+        imperdiet a nisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras quis sem augue. Curabitur rutrum lorem lorem.
+      </div>
+
+      <div id = "commenter" class = "nes-container is-rounded">
+      <span><input type="text"></span> <span>Rating:<input type="number"></span>  
+      <textarea rows="2" cols="90"></textarea>
+      <button>S</button>
+      </div>
+
+      <div id = "reviews" class = "nes-container is-rounded">
+      <div id = "latest_comments">
+        <h3>Latest Reviews</h3><br>
+        <a href="/review">Great game. Would recommend.</a>
+      </div>
+
+      </div>
+      <!--Old code
     <div class ="blnkspce">
     </div>
     <div class ="bckgrnd-content">
@@ -82,9 +130,7 @@
       </div>
       
     </div id = "insertion point">
-
-
+-->
     </div>
-
   </body>
 </html>

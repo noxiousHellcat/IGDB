@@ -12,16 +12,20 @@ body{
     padding: 0;
     background-size: cover;
     background-position: center;
+    height: 100%;
+
   }
   .page
   {
-    margin-top: 1em;
+    background-color: rebeccapurple;
     display: grid;
+    padding-top: 1em;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows:repeat(6, 1fr);
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     width: auto;
+    height: 88vh;
     
   }
   .header {
@@ -34,6 +38,8 @@ body{
     grid-template-columns: repeat(5, 1fr);
     background-color: rebeccapurple;
     padding-bottom: 10px;
+    height:12%;
+
   }
   .header a{
     text-decoration: none;
