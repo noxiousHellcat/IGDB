@@ -40,6 +40,7 @@ app.get("/database", urlencoder, (req,res)=>{
     res.render("database.hbs", {})
 })
 
+
 app.get("/search", urlencoder, (req,res)=>{
     //access the database page
     if(req.query.search_select=="user"){
@@ -53,6 +54,12 @@ app.get("/login", urlencoder, (req,res)=>{
     //go to log in page
     res.render("login.hbs", {})
 })
+
+app.get("/about", urlencoder, (req,res)=>{
+    //go to log in page
+    res.render("about.hbs", {})
+})
+
 
 app.get("/game", urlencoder, (req,res)=>{
     //view a game
@@ -121,7 +128,7 @@ app.post("/playlist", urlencoder, (req,res)=>{
 app.post("/playlist_add", urlencoder, (req,res)=>{
     //create a playlist
     let game = req.body.game
-    
+
     res.render("playlist.hbs", {})
 })
 
