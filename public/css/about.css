@@ -19,29 +19,43 @@ body{
 
 .header {
   background-color:whitesmoke;
-  grid-area: 1 / 1 / 2 / 6;
   height:12%;
   border-bottom:solid black;
-  border-radius: 7px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   background-color: rebeccapurple;
+
 }
 .header a{
   text-decoration: none;
   font-size: 12px;
   line-height: 20px;
+  font-family: 'VCR', Fallback, sans-serif;
   color:white;
   float: center;
 }
+.header button,form,#search
+{
+  font-family: 'VCR', Fallback, sans-serif;
+}
+
 .header a:hover
 {
-  color: greenyellow  ;
+  color: greenyellow;
 }
+
+.header img{
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
 #links
 {
   grid-area: 1/5 ;
 }
+
 
 #page{
   background-color: black;
@@ -53,12 +67,72 @@ body{
   height: 87%
 }
 
-#main-art{
+.main-art{
  grid-area: 2 / 3 / 8 / 8;
-  border: solid white;
+  border: dotted white;
+  color:white;
   height: 100%;
 }
+.main-modules{
+  grid-area: 2 / 3 / 8 / 8;
+   border: dotted white;
+   color:white;
+   height: 100%;
+ }
+ .main-information{
+  grid-area: 2 / 3 / 8 / 8;
+   border: dotted white;
+   color:white;
+   height: 100%;
+ }
+
+ 
 #button-art{
    grid-area: 2 / 2 / 3 / 3;
-   border: solid white  ;
+   border-left: dotted white  ;
+   border-top: dotted white  ;
+   border-bottom: dotted white  ;
+}
+#button-art button{
+  background-color: black;
+  border: black;
+  color:white;
+}
+
+#button-modules{
+  grid-area: 3 / 2 / 4 / 3;;
+  border-left: dotted white;
+  border-bottom: dotted white ;
+}
+#button-modules button{
+ background-color: black;
+ border: black;
+ color:white;
+}
+
+#button-information{
+  grid-area: 4 / 2 / 5 / 3; 
+  border-left: dotted white;
+  border-bottom: dotted white;
+  
+}
+#button-information button{
+ background-color: black;
+ border: black;
+ color:white;
+}
+
+
+#art-container{
+  color: white;
+  display: none ;
+}
+#modules-container{
+  color: white;
+  display: none ;
+}
+#information-container{
+  color: white;
+
+  display: none ;
 }
