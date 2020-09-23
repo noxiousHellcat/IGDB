@@ -60,5 +60,5 @@ body{
 }
 #button-art{
    grid-area: 2 / 2 / 3 / 3;
-   border: solid white;
+   border: solid white  ;
 }
