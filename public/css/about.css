@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+}
+@font-face{
+  font-family: 'Gravity';
+  src: url("fonts/Gravity-Book.otf") format("truetype");
+}
+@font-face{
+  font-family: 'VCR';
+  src: url("fonts/VCR_OSD.ttf") format("truetype");
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.header {
+  background-color:whitesmoke;
+  grid-area: 1 / 1 / 2 / 6;
+  height:12%;
+  border-bottom:solid black;
+  border-radius: 7px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  background-color: rebeccapurple;
+}
+.header a{
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 20px;
+  color:white;
+  float: center;
+}
+.header a:hover
+{
+  color: greenyellow  ;
+}
+#links
+{
+  grid-area: 1/5 ;
+}
+
+#page{
+  background-color: black;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  height: 87%
+}
+
+#main-art{
+ grid-area: 2 / 3 / 8 / 8;
+  border: solid white;
+  height: 100%;
+}
+#button-art{
+   grid-area: 2 / 2 / 3 / 3;
+   border: solid white;
+}
