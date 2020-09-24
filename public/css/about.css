@@ -94,12 +94,16 @@ body{
    border-bottom: dotted white  ;
 }
 #button-art button{
+  font-family: 'VCR', Fallback, sans-serif;
+
   background-color: black;
   border: black;
   color:white;
 }
 
 #button-modules{
+  font-family: 'VCR', Fallback, sans-serif;
+
   grid-area: 3 / 2 / 4 / 3;;
   border-left: dotted white;
   border-bottom: dotted white ;
@@ -117,6 +121,8 @@ body{
   
 }
 #button-information button{
+  font-family: 'VCR', Fallback, sans-serif;
+
  background-color: black;
  border: black;
  color:white;
@@ -133,6 +139,69 @@ body{
 }
 #information-container{
   color: white;
-
   display: none ;
 }
+
+.page button{
+  outline:none;
+  font-family: 'VCR', Fallback, sans-serif;
+
+}
+
+
+
+.art-class{
+  color: white;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: solid 3px rgba(255,255,255,0);
+  margin: 10px;
+  font-family: 'VCR', Fallback, sans-serif;
+
+}
+
+
+
+
+/* Animation */
+/* There is a more efficient way of implementing this*/
+.anim-typewriter1 {
+  animation: typewriter 4s steps(60) 1s 1 normal both;
+}
+.anim-typewriter2 {
+  animation: typewriter 4s steps(60) 1s 1 normal both;
+  animation-delay: 2s;
+}
+.anim-typewriter3{
+  animation: typewriter 4s steps(60) 1s 1 normal both;
+  animation-delay: 3s;
+}
+.anim-typewriter4{
+  animation: typewriter 4s steps(60) 1s 1 normal both;
+  animation-delay: 4s;
+}
+.anim-typewriter5{
+  animation: typewriter 4s steps(60) 1s 1 normal both;
+  animation-delay: 5s;
+}
+.anim-typewriter6{
+  animation: typewriter 4s steps(60) 1s 1 normal both;
+  animation-delay: 6s;
+}
+.anim-typewriter7{
+  animation: typewriter 4s steps(60) 1s 1 normal both;
+  animation-delay: 7s;
+}
+.anim-typewriter8{
+  animation: typewriter 4s steps(60) 1s 1 normal both;
+  animation-delay: 8s;
+}
+
+@keyframes typewriter{
+  from{
+    width: 0;
+  }
+  to{width: 100%;
+  }
+}
+

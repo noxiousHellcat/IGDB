@@ -2,67 +2,45 @@ var art =   document.getElementById("art-container");
 var modules = document.getElementById("modules-container");
 var information = document.getElementById("information-container");
 
-
-
-
-
-
-
-
-
+var artbtn = document.getElementById("button-art");
+var modbtn = document.getElementById("button-modules");
+var infbtn = document.getElementById("button-information");
 
 
 function typeWriterA() {
-    var a = 0;
-    var avalue = art.innerHTML;
-    var aarr = avalue.split(' ');
-    var alength = 0;
-    for(var i in aarr){
-        alength += aarr[i].length
-    }
-    if (a < alength) {
-      art.innerHTML += txt.charAt(a);
-      a++;
-      setTimeout(typeWriter, speed);
-    }
+    modbtn.style.backgroundImage = "";
+    infbtn.style.backgroundImage = "";
     art.style.display = "block";
+    artbtn.style.backgroundColor = "#0000";
+    artbtn.style.backgroundImage = "radial-gradient(circle, #ffffff 12%, transparent 10%), radial-gradient(circle, #ffffff 12%, transparent 10%)";
+    artbtn.style.backgroundSize =  "10px 10px";
+    artbtn.style.backgroundPosition =  "0 0, 50px 50px";
+
     modules.style.display = "none";
     information.style.display = "none";
   }
 
   function typeWriterM() {
-    var b = 0;
-    var mvalue = modules.innerHTML;
-    var marr = mvalue.split(' ');
-    var mlength = 0;
-    for(var j in marr){
-        mlength += aarr[j].length
-    }
-    if (b < mlength) {
-      modules.innerHTML += txt.charAt(b);
-      b++;
-      setTimeout(typeWriter, speed);
-    }
+    artbtn.style.backgroundImage = "";
+    infbtn.style.backgroundImage = "";
+    modbtn.style.backgroundColor = "#0000";
+    modbtn.style.backgroundImage = "radial-gradient(circle, #ffffff 12%, transparent 10%), radial-gradient(circle, #ffffff 12%, transparent 10%)";
+    modbtn.style.backgroundSize =  "10px 10px";
+    modbtn.style.backgroundPosition =  "0 0, 50px 50px";
+
     art.style.display = "none";
     modules.style.display = "block";
     information.style.display = "none";
   }
 
   function typeWriterI() {
+    modbtn.style.backgroundImage = "";
+    artbtn.style.backgroundImage = "";
+    infbtn.style.backgroundColor = "#0000";
+    infbtn.style.backgroundImage = "radial-gradient(circle, #ffffff 12%, transparent 10%), radial-gradient(circle, #ffffff 12%, transparent 10%)";
+    infbtn.style.backgroundSize =  "10px 10px";
+    infbtn.style.backgroundPosition =  "0 0, 50px 50px";
 
-var c = 0;
-var ivalue = information.innerHTML;
-var iarr = ivalue.split(' ');
-var ilength = 0;
-for(var k in aarr){
-    ilength += iarr[k].length
-}
-
-    if (c < ilength) {
-      modules.innerHTML += txt.charAt(c);
-      c++;
-      setTimeout(typeWriter, speed);
-    }
     art.style.display = "none";
     modules.style.display = "none";
     information.style.display = "block";
