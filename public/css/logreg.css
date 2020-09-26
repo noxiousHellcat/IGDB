@@ -242,6 +242,12 @@ body p{
     background-color: #E7DFDF;
   }
 
+
+  #success{
+    text-align: center;
+    grid-area: 2 / 2 / 3 / 4; }
+   
+
 @-webkit-keyframes fadeIn {
     from { opacity: 0; }
       to { opacity: 1; }
@@ -252,4 +258,13 @@ body p{
       to { opacity: 1; }
 }
 
-  
+  #page2{
+    background-color: white;
+    margin-top: 6px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    height: 90vh;
+  }

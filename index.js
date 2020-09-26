@@ -84,6 +84,12 @@ app.get("/review", urlencoder, (req,res)=>{
     res.render("review.hbs", {})
 })
 
+app.get("/success", urlencoder, (req,res)=>{
+    //view a review
+
+    res.render("success.hbs", {})
+})
+
 app.post("/game", urlencoder, (req,res)=>{
     //create a game
     let title = req.body.title

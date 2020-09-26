@@ -170,7 +170,7 @@ body{
 }
 .anim-typewriter2 {
   animation: typewriter 4s steps(60) 1s 1 normal both;
-  animation-delay: 2s;
+  animation-delay: 1.5s;
 }
 .anim-typewriter3{
   animation: typewriter 4s steps(60) 1s 1 normal both;
@@ -178,23 +178,23 @@ body{
 }
 .anim-typewriter4{
   animation: typewriter 4s steps(60) 1s 1 normal both;
-  animation-delay: 4s;
+  animation-delay: 4.5s;
 }
 .anim-typewriter5{
   animation: typewriter 4s steps(60) 1s 1 normal both;
-  animation-delay: 5s;
+  animation-delay: 6s;
 }
 .anim-typewriter6{
   animation: typewriter 4s steps(60) 1s 1 normal both;
-  animation-delay: 6s;
+  animation-delay: 7.5s;
 }
 .anim-typewriter7{
   animation: typewriter 4s steps(60) 1s 1 normal both;
-  animation-delay: 7s;
+  animation-delay: 9s;
 }
 .anim-typewriter8{
   animation: typewriter 4s steps(60) 1s 1 normal both;
-  animation-delay: 8s;
+  animation-delay: 10.5s;
 }
 
 @keyframes typewriter{

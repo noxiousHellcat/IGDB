@@ -1,0 +1,86 @@
+    <!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/css/logreg.css">
+        <link rel="stylesheet" type="text/css" href="css/nes.css/css/nes.css">
+
+        <title>IGDB - Login</title>
+    </head>
+    <body>
+            <div class = "header"><!--Header image here-->
+                <div>
+                <img src="images/IGDB.png" height="75" width="200">
+                </div>
+                <div id ="links">
+                      <a href ="/"> Home</a> 
+                      <a href ="/database"> Database</a> 
+                    <a href="/login">Sign In/Register</a>
+                            <a href="/about">About</a>
+
+                    <form method="GET" action="search">
+                        <input type="search" name="q" placeholder="Search Game Titles or Users.."><br>
+                        <button type="submit" value="Search">Search</button>
+                        <select name="search_select">
+                            <option value="user">Users</option>
+                            <option value="game">Games</option>
+                        </select>
+                    </form>
+                </div>    
+            </div>
+    <div class = "nes-container is-rounded" id = "page2">
+        <div id = "success">
+            <h2>Login Successful! You are now being redirected!!</h3>
+            <br>
+            <img src= "images/output_9uKHtU.gif">
+
+        </div>
+    </div>        
+        <!--
+        <div id="reg_Modal" class="modal">
+            <div class="reg_modal">
+                <span class="close1">&times;</span>
+                <div id = "modal_title">
+                    <h2>Something quirky  I don't know</h2>
+                </div>
+              <form method="POST" action="register">
+                <p>Username</p>
+                <input  id = "uname" type="text" name="username" placeholder="Enter Username">
+                <p>E-mail</p>
+                <input  id = "umail" type="email" name="email" placeholder="Enter e-mail">
+                <input  id = "umail2" type="email" name="" placeholder="Confirm e-mail">
+                <p>Password</p>
+                <input id = "pword" type="password" name="password" placeholder="Enter Password">
+                <input id = "pword2" type="password" name="" placeholder="Confrm Password">
+                <br>
+                <p>Birthday</p>
+                <input id = "birth" type="date" name="birthday">
+                <br>
+                <br>
+                <button id ="sub" type="submit" value="register">Register</button>
+            </form>
+            </div>
+          
+          </div>
+
+          <div id="forgot_Modal" class="modal">
+            <div class="for_modal">
+                <span class="close2">&times;</span>
+                <div id = "modal_title">
+                    <h2>Something quirky  I don't know</h2>
+                </div>
+              <form method="POST" action="forgotpassword">
+                <p>Username</p>
+                <input  id = "uname" type="text" name="username" placeholder="Enter Username">
+                <p>E-mail</p>
+                <input  id = "umail" type="email" name="email" placeholder="Enter E-mail">
+                <button id ="sub" type="submit" value="forgotpassword">Retrieve Password</button>
+            </form>
+            
+            </div>
+          
+          </div>
+        -->
+    
+    <script src="/js/login.js"></script>
+    </body>
+</html>
