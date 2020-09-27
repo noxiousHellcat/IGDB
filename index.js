@@ -4,7 +4,7 @@ const hbs = require("hbs")
 const bodyparser = require("body-parser")
 const mongoose = require("mongoose")
 const {Game} = require("./models/game.js")
-
+var PORT = 3000 || process.env.PORT;
 const app = express()
 
 const urlencoder = bodyparser.urlencoded({
@@ -169,6 +169,6 @@ app.post("/forgotpassword", urlencoder, (req,res)=>{
 })
 
 
-app.listen(3000, function(){
-    console.log("Listening to port 3000")
+app.listen(PORT, function(){
+    console.log("Listening to port " + PORT)
 })
