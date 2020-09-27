@@ -170,5 +170,5 @@ app.post("/forgotpassword", urlencoder, (req,res)=>{
 
 
 app.listen(PORT, function(){
-    console.log("Listening to port " + PORT)
+    console.log("Listening to port  " + PORT)
 })
