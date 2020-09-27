@@ -4,7 +4,7 @@ const hbs = require("hbs")
 const bodyparser = require("body-parser")
 const mongoose = require("mongoose")
 const {Game} = require("./models/game.js")
-var PORT = 3000 || process.env.PORT;
+var PORT = process.env.PORT || 3000;
 const app = express()
 
 const urlencoder = bodyparser.urlencoded({
