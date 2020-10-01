@@ -6,7 +6,7 @@ const bodyparser = require("body-parser")
 const mongoose = require("mongoose")
 const crypto = require("crypto")
 const MongoStore = require('connect-mongo')(session)
-
+const PORT = process.env.PORT || 3000;
 const {Game} = require("./models/game.js")
 const {User} = require("./models/user.js")
 const {Playlist} = require("./models/playlist.js")
@@ -799,6 +799,6 @@ app.post("/forgotpassword", urlencoder, (req,res)=>{
 })
 
 
-app.listen(3000, function(){
+app.listen(PORT, function(){
     console.log("Listening to port 3000")
 })
