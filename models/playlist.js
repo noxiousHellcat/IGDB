@@ -1,12 +1,23 @@
 const mongoose = require("mongoose")
 
-let Playlist = mongoose.model("playlist", {
+const gameSchema = new mongoose.Schema({
+    title: String,
+    genre: String,
+    publisher: String,
+    developer: String,
+    year: String,
+    description: String
+})
+
+const playlistSchema = new mongoose.Schema({
     title: String,
     private: Boolean,
     user_id: String,
     description: String,
-    game_id: [String]
+    games: [gameSchema]
 })
+
+let Playlist = mongoose.model("playlist", playlistSchema)
 
 module.exports = {
     Playlist

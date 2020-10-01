@@ -1,82 +1,85 @@
-</<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
       <link rel="stylesheet" type="text/css" href="css/review.css">
-    <title id = "igdb_title">IGDB - </title>
+     <link rel="stylesheet" type="text/css" href="css/nes.css/css/nes.css">
+
+    <title id = "igdb_title">IGDB - {{title}}</title>
   </head>
   <body>
-    <div class = "header">
-      <!--Header image here-->
-      <img src="images/IGDB.png" height="75" width="200">
-      <div id ="links"> 
-        <a href ="/"> Home</a> 
-        <a href ="/database"> Database</a> 
-        <a href="/login">Sign In/Register</a>
-                <a href="/about">About</a>
-
-        <form method="GET" action="search">
-          <input type="search" name="query" placeholder="Search Game Titles or Users.."><br>
-          <button type="submit" value="Search">Search</button>
-          <select name="search_select">
-                            <option value="user">Users</option>
-                            <option value="game">Games</option>
-                        </select>
-        </form>
-     </div>
+<div class = "header">
+    <!--Header image here-->
+    <div id="header_logo" class="nes-container is-rounded is-dark" style="background-color: rebeccapurple !important">
+      <center>
+        <span id="banner_title">INTERNET GAMES DATABASE</span>
+      </center>
     </div>
-<!--Container for things below-->
-    <div class = "page">
-    <div class ="gamepic_space">
-    <img id = "gamepic" src="https://i.ytimg.com/vi/90okTocF9DM/maxresdefault.jpg">
+    <div id ="links">
+        <a class="nes-btn" href ="/"> Home</a> 
+        <a class="nes-btn" href ="/database"> Database</a> 
+        {{#if susername}}
+          <a class="nes-btn" href="/user_page?uid={{uid}}">User Page</a>
+          <a class="nes-btn" href="/logout">Sign out {{susername}}</a>
+        {{else}}        
+          <a class="nes-btn" href="/login">Sign In/Register</a>
+        {{/if}}
+        <a class="nes-btn" href="/about">About</a>
     </div>
-    <div class ="info_space">
-    <b><p>Title:</p></b><span id = "title">Default Game </span>
-    <b><p>Publisher:</p></b><span id = "publisher">Default Game </span>
-    <b><p>Developer:</p></b><span id = "developer">BethEAsoft</span>
-    <b><p>Year Published:</p></b><span id = "year_published">Default Game </span>
-
-    </div>
-    <div class ="title_space">
-      <h1 id="game_title">Great game. Would recommend.</h1>
-    </div>
-    <div id = "main-content" class="main-content">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pulvinar vel quam sed porttitor. Donec sodales eget est quis eleifend. Vestibulum lacinia suscipit molestie.
-     In nec accumsan orci. In sodales ipsum in consequat consectetur. Curabitur fringilla nulla quis convallis sagittis. Cras porta dolor ut consequat posuere. Morbi ut eleifend
-     libero. Mauris ut dolor in arcu luctus semper eget id magna. Nam turpis purus, pellentesque fringilla pretium in, tincidunt sit amet massa. Sed vestibulum leo a malesuada commodo.
-     Morbi tincidunt urna quis risus dictum fermentum. Cras vel dignissim urna.
-
-      Praesent hendrerit placerat laoreet. Nulla imperdiet nulla at eros condimentum tincidunt. Cras quam elit, viverra elementum dolor vel, ullamcorper consectetur elit.
-      Morbi vel turpis ut sem laoreet imperdiet non in elit. Vestibulum vulputate eget risus id sollicitudin. Nullam non tortor et quam pharetra tristique ut nec nunc.
-       Fusce vitae ullamcorper arcu, nec iaculis tellus. Aliquam a pretium ipsum, vel euismod leo. Sed egestas ex sit amet suscipit vehicula. Donec lectus tellus, dignissim sed
-       leo et, feugiat aliquam turpis. Aenean imperdiet tincidunt elementum. Integer vitae finibus augue.
-
-      Praesent fermentum turpis nunc. Integer ultricies lacus at aliquet aliquam. Curabitur tempus nibh ut est mollis, non tincidunt velit blandit.
-      Vivamus at libero pellentesque mi aliquet sollicitudin. Mauris ex enim, cursus non mollis ut, egestas eget leo. Sed viverra risus libero, et
-      accumsan velit rhoncus vitae. Aenean nunc nisi, semper vel scelerisque at, imperdiet a nisi. Pellentesque habitant morbi tristique senectus et
-       netus et malesuada fames ac turpis egestas. Cras quis sem augue. Curabitur rutrum lorem lorem.
-       <br>
-       <h3>100/100</h3>
-    </div>
-
-    <div class = "comments">
-      <p id="curr_comments"></p>
-      <div id = "comments">
-      <form method="POST" action="comment">
-      <textarea name="comment" rows="4" cols="80">
-      </textarea>
-      <button type="submit">Comment</button>
+    <div id="sitesearch">
+      <form method="GET" action="search" id = "search">
+          <button type="submit" value="Search" class="nes-btn" style="float:left">Search</button>
+          <div class="nes-select siteselect">
+            <select name="search_select">
+              <option value="user">Users</option>
+              <option value="game">Games</option>
+            </select>
+          </div>
+          <div class="nes-field is-inline"  >
+              <input style="margin-left:8px !important" type="search" name="query" placeholder="Search Game Titles or Users.." class="nes-input">
+          </div>
       </form>
+    </div>
+</div>
+<!--Container for things below-->
+    <div id = "page">
+      <div id = "gametitle" class = "nes-container is-rounded">
+        <h3>{{game_title}}</h3><br>
+        <progress class="nes-progress is-primary" value="{{rating}}" max="100"></progress>
       </div>
-    </div>
+      <div class="cont">
+        <div id = "gamedesc" class = "nes-container is-rounded">
+          <h3>{{title}}</h3>
+          <b>by {{user.username}}</b><br><br>
+          {{review}}
+        </div>
+        <div id = "commenter" class = "nes-container is-rounded">
+            <h3>Comment on this review.</h3>
+            <form class = "form_form" id = "form_form" method="POST" action="/comment">
+                  <input type="hidden" name="rid" value="{{rid}}" /> 
+                  <input type="hidden" name="uid" value="{{uid}}" /> 
+                  <input type="hidden" name="username" value="{{susername}}" /> 
+                  <p style="margin: 5px 0 0 0">Comment</p>
+                  <textarea name="comment" rows="4" cols="86" placeholder="This game is great!"></textarea>
+                  {{#if susername}}
+                  <br><button class="nes-btn" id = "submit">Submit</button>
+                  {{else}}
+                  <a class="nes-btn" href="/login">Sign In to Comment</a>
+                  {{/if}}
+            </form>
+        </div>
+      </div>
 
-    <div class="latest_comments">
-      <div id = "latest_comments"><b>Latest Comments</b></div>
-    <div id = "insertion point">
+      <div id = "reviews" class = "nes-container is-rounded">
+          <table>
+            <tr><th><h3>Comments</h3></th></tr>
+            {{#each comments}}
+            <tr><td><a href="/user_page?uid={{user._id}}">{{user.username}}:</a> {{comment}}</td></tr>
+            {{/each}}
+          </table>
+      </div>
 
-
-    </div>
-    </div>
+      
     </div>
   </body>
 </html>

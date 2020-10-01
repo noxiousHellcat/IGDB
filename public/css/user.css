@@ -7,67 +7,59 @@
   font-family: 'VCR';
   src: url("fonts/VCR_OSD.ttf") format("truetype");
 }
-body{
-    margin: 0;
-    padding: 0;
-    background-size: cover;
-    background-position: center;
-    height: 100%;
 
-  }
   .page
   {
-    background-color: rebeccapurple;
-    display: grid;
-    padding-top: 1em;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows:repeat(6, 1fr);
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
-    width: auto;
-    height: 88vh;
-    
+    width: 100%;
+    height:auto;
+    float:left;
+    background-color: #E7DFDF;
   }
-  .header {
-    background-color:whitesmoke;
-    height:fit-content;
-    border-bottom:solid black;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    background-color: rebeccapurple;
-    padding-bottom: 10px;
-    height:12%;
-
+   .header {
+    min-height:60px;
+    width:100%;
+    padding:7px;
+    background-color:#E7DFDF;
+    float:left;
   }
   .header a{
     text-decoration: none;
-    font-size: 12px;
-    line-height: 20px;
     font-family: 'VCR', Fallback, sans-serif;
-    color:white;
-    float: center;
   }
-  .header button,form 
+  .header button,form,#search
   {
     font-family: 'VCR', Fallback, sans-serif;
   }
-  
+
   .header img{
     margin-left: 10px;
     margin-top: 10px;
   }
-  .header a:hover
-  {
-    color: greenyellow;
-  }
 
+  #header_logo{
+    float:left;
+    width:100%;
+  }
+  #banner_title{
+    font-family: 'VCR', Fallback, sans-serif;
+    font-size:5em;
+  }
   #links
   {
-    grid-area: 1/5;
+    width:50%;
+    float:left;
+    text-align:left;
   }
- 
+  #sitesearch{
+    width: 50%;
+    float:left;
+    text-align:right;
+  }
+  .siteselect{
+    width:120px !important;
+    float:left;
+    margin-left:8px !important;
+  }
 #body {
   background-color: #E7DFDF;
      grid-area: 1 / 1 / 5 / 4;
@@ -80,35 +72,27 @@ body{
 
  
 }
-#footer {
-  background-color: #E7DFDF;
-    grid-area: 5/ 1 / 7 / 4;
-    padding: 20px;
-}
 
-#footer h3{
+.panel{
   font-family: 'VCR', Fallback, sans-serif;
-}
-
-#playlists {
-  background-color: #E7DFDF;
-     grid-area: 1/ 4 / 4 / 6;
-     padding: 20px;
-}
-#playlists h3{
-  font-family: 'VCR', Fallback, sans-serif;
-}
-
-#comments {
   padding: 20px;
   background-color: #E7DFDF;
-    grid-area: 4 / 4 / 7 / 6;
+  margin: auto;
+  margin-top:10px !important;
+  float:left;
+  width:99%;
 }
-#comments h3 {
-  font-family: 'VCR', Fallback, sans-serif;
 
+td{
+  padding-right:50px;
+}
+th{
+  padding-right:50px;
 }
 
+.orange{
+  background-color:#f0ff00;
+}
 /*Modal*/
 
 #addnew {
@@ -167,3 +151,39 @@ body{
   {
     width: 70%;
   }
+
+
+  
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  margin-top: 10px;
+  display: none;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #d16fd8;
+  border: 0px none #ffffff;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b670d7;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #9a36a1;
+}
+::-webkit-scrollbar-track {
+  background: #ffffff;
+  border: 0px none #ffffff;
+}
+::-webkit-scrollbar-track:hover {
+  background: #eee2e2;
+}
+::-webkit-scrollbar-track:active {
+  background: #dedede;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}

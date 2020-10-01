@@ -1,86 +1,79 @@
+@import "/node_modules/pixel-borders/src/styles/pixel-borders.scss";
+
+@font-face{
+  font-family: 'Gravity';
+  src: url("fonts/Gravity-Book.otf") format("truetype");
+}
+@font-face{
+  font-family: 'VCR';
+  src: url("fonts/VCR_OSD.ttf") format("truetype");
+}
+
 * {
     box-sizing: border-box;
   }
   body{
       margin: 0;
       padding: 0;
-      background-color:white;
+      background-color:#E7DFDF;
       background-size: cover;
       background-position: center;
-      font-family:monospace;
+      font-family: 'VCR', Fallback, sans-serif!important;
     }
-    .header {
-      background-color:whitesmoke;
-      height:fit-content;
-      border-bottom:solid black;
-      border-radius: 10px;
-      border-top-left-radius:0px;
-      border-top-right-radius:0px;
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      background-color: rebeccapurple;
-    }
-    .header a{
-      text-decoration: none;
-      font-size: 12px;
-      line-height: 20px;
-      color:white;
-      float: center;
-    }
-    .header a:hover
-    {
-      color: greenyellow  ;
-    }
-    #links
-    {
-      grid-area: 1/5 ;
-    }
+  .page
+  {
+    height: 100%;
+    width:100%;
+    padding: 14px;
+    background-color:#E7DFDF;
+  }
+  .header {
+    min-height:60px;
+    width:100%;
+    padding:7px;
+    background-color:#E7DFDF;
+    float:left;
+  }
+  .header a{
+    text-decoration: none;
+    font-family: 'VCR', Fallback, sans-serif;
+  }
+  .header button,form,#search
+  {
+    font-family: 'VCR', Fallback, sans-serif;
+  }
 
+  .header img{
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+
+  #header_logo{
+    float:left;
+    width:100%;
+  }
+  #banner_title{
+    font-family: 'VCR', Fallback, sans-serif;
+    font-size:5em;
+  }
+  #links
+  {
+    width:50%;
+    float:left;
+    text-align:left;
+  }
+  #sitesearch{
+    width: 50%;
+    float:left;
+    text-align:right;
+  }
+  .siteselect{
+    width:120px !important;
+    float:left;
+    margin-left:8px !important;
+  }
     
 
-    /*Grid stuff*/
-    .page {
-        display: grid;
-        grid-template-columns: repeat(10, 1fr);
-        grid-template-rows: repeat(10, 1fr);
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
-        height: auto;
-        width: 100%;
-        background-color: whitesmoke;
-        border-radius: 10px;
-        border: solid black 2px;
-        margin-top: 5em;
-    }
-        
-    .playground {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: repeat(5, 1fr); 
-        /*background-color: limegreen;*/
-        grid-area: 2 / 2 / 10 / 10;
-        text-align: right; 
-    }
-    #return{
-      padding-top:3em;
-      padding-right: 3em;
-      grid-area: 1 / 4 / 2 / 6;
-    }
-    
-    .playsholder { 
-        /*background-color: green;*/
-        grid-area: 2 / 2 / 3 / 3;
-        margin-left: 10px; 
-        margin-top: 10px; 
-    }
-    .playarea {
-       /* background-color: red;*/
-         grid-area: 3 / 2 / 10 / 10;
-    }
-    .playbutton {
-       /* background-color: blue;*/
-         grid-area: 2 / 3 / 3 / 6; 
-    } 
 
 
     /*Modal*/

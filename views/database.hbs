@@ -2,294 +2,154 @@
     <head>
         <link rel="stylesheet" type="text/css" href="/css/database.css">
         <link rel="stylesheet" type="text/css" href="css/nes.css/css/nes.css">
-        <title>IGDB - My Profile</title>
+        <title>IGDB - View the Database</title>
     </head>
 <body>
 
 <div class = "header">
     <!--Header image here-->
-    <img src="images/IGDB.png" height="75" width="200">
+    <div id="header_logo" class="nes-container is-rounded is-dark" style="background-color: rebeccapurple !important">
+      <center>
+        <span id="banner_title">INTERNET GAMES DATABASE</span>
+      </center>
+    </div>
     <div id ="links">
-        <a href ="/"> Home</a> 
-        <a href ="/database"> Database</a> 
-        <a href="/login">Sign In/Register</a>
-                <a href="/about">About</a>
-
+        <a class="nes-btn" href ="/"> Home</a> 
+        <a class="nes-btn" href ="/database"> Database</a> 
+        {{#if susername}}
+          <a class="nes-btn" href="/user_page?uid={{uid}}">User Page</a>
+          <a class="nes-btn" href="/logout">Sign out {{susername}}</a>
+        {{else}}        
+          <a class="nes-btn" href="/login">Sign In/Register</a>
+        {{/if}}
+        <a class="nes-btn" href="/about">About</a>
+    </div>
+    <div id="sitesearch">
       <form method="GET" action="search" id = "search">
-          <input type="search" name="query" placeholder="Search Game Titles or Users.."><br>
-          <button type="submit" value="Search">Search</button>
-          <select name="search_select">
-                            <option value="user">Users</option>
-                            <option value="game">Games</option>
-              </select>
+          <button type="submit" value="Search" class="nes-btn" style="float:left">Search</button>
+          <div class="nes-select siteselect">
+            <select name="search_select">
+              <option value="user">Users</option>
+              <option value="game">Games</option>
+            </select>
+          </div>
+          <div class="nes-field is-inline"  >
+              <input style="margin-left:8px !important" type="search" name="query" placeholder="Search Game Titles or Users.." class="nes-input">
+          </div>
       </form>
     </div>
-  </div>
+</div>
 
 <div class = "page"> 
-  <div class = "nes-container is-rounded" id ="search_bar">
-    <h3>Search</h3>
-    <p>Name: </p>
-    <input type = "search">
-    <br>
-    <br>
-    <h3>Tags:</h3>
-    <form>
-    <table>
-    <tr>
-      <th><input type="checkbox" name="genre_01" value="action">
-      <label for="genre_01">Action</label><br></th>
-      <th><input type="checkbox" name="genre_02" value="adventure">
-      <label for="genre_02">Adventure</label><br></th>
-    </tr>
-    <tr>
-      <th><input type="checkbox" name="genre_03" value="arcade">
-      <label for="genre_03">Arcade</label><br></th>
-      <th><input type="checkbox" name="genre_04" value="beatemup">
-      <label for="genre_04">Beat'em up</label><br></th>
-    </tr>
-    <tr>
-      <th><input type="checkbox" name="genre_05" value="casual">
-      <label for="genre_05">Casual</label><br></th>
-      <th><input type="checkbox" name="genre_06" value="competitive">
-      <label for="genre_06">Competitive</label><br></th>
-    </tr>
-    <tr>
-      <th><input type="checkbox" name="genre_07" value="cooperative">
-      <label for="genre_07">Coop</label><br></th>
-      <th><input type="checkbox" name="genre_08" value="fighting">
-      <label for="genre_08">Fighting</label><br></th>
-    </tr>
-    <tr>
-      <th><input type="checkbox" name="genre_09" value="firstperson">
-      <label for="genre_09">FPerson</label><br></th>
-      <th><input type="checkbox" name="genre_10" value="horror">
-      <label for="genre_10">Horror</label><br></th>
-    </tr>
-    <tr>
-      <th><input type="checkbox" name="genre_11" value="rts">
-      <label for="genre_11">RTS</label><br></th>
-      <th><input type="checkbox" name="genre_12" value="rtt">
-      <label for="genre_12">RTT</label><br></th>
-    </tr>
-    <tr>
-      <th><input type="checkbox" name="genre_13" value="rpg">
-      <label for="genre_13">RPG</label><br></th>
-      <th><input type="checkbox" name="genre_14" value="roguelike">
-      <label for="genre_14">Roguelike</label><br></th>
-    </tr>
-    <tr>
-      <th><input type="checkbox" name="genre_15" value="simulation">
-      <label for="genre_15">Sim</label><br></th>
-      <th><input type="checkbox" name="genre_16" value="shooter">
-      <label for="genre_16">Shooter</label><br></th>
-    </tr>
-      <br>
-    </table>
-    </form>
-      <input type="submit" value="Submit">
-    
-    <br>
-    <p></p>
-  </div>
+  {{#if admin}}
+  <center>
+      <h3>Admin Options</h3>
+      <button id="addnew" class="nes-btn is-success">Add New</button>
+      <button class="edit_btn nes-btn is-warning" >Edit</button>
+      <button class="del_btn nes-btn is-error" >Delete</button>
+  </center>
+  {{/if}}
   <div id = "insertion_point" class="nes-container is-rounded">
-    <!--Dynamically adjust per content, Will scroll-->
-    <!--Will need to change this to get all game titles from database and render automatically-->
-    <!-- {{#each Game}}
-            <div class = "gamecard" >
-                <a href="/game"><h3>{{this.gametitle}}
-                <p>Genre:</p>{{this.genre}}
-                <p>Developer:</p>{{this.developer}}
-                <p>Date Released:</p>{{this.year}}
-            </div>
-        {{/each}}
-      -->
-      <div class = "gamecard" id = "game1">
-        <a href="/game"><h3 id="game_title1">Game Title here</h3></a>
-        <b>Date Released:</b> <p id ="game_date1">August 2020</p>
-        <b>Developer:</b> <p id ="game_dev1">EABethsoft</p>
-        <b>Date Released:</b> <p id ="game_date1">August 2020</p>  
+    {{#each docs}}
+      <div class = "gamecard">
+        <form method="POST">
+          <a href="/game?gid={{_id}}"><h3 id="game_title">{{title}}</h3></a>
+          <b>Genre:</b> <p id = "game_genre">{{genre}}</p>
+          <b>Publisher:</b> <p id ="game_dev">{{publisher}}</p>
+          <b>Developer:</b> <p id ="game_dev">{{developer}}</p>
+          <b>Date Released:</b> <p id ="game_date">{{year}}</p>
+
+          {{!-- {{#if admin}}
+            <button type="submit" formaction="/db_delete" class="nes-btn">Delete</button>
+          {{/if}} --}}
+        </form>
       </div>
-
-      <div class = "gamecard" id ="game2">
-        <a href="/game"><h3 id="game_title2">Game Title here</h3></a>
-        <b>Genre:</b> <p id = "game_genre2">All of them</p>
-        <b>Developer:</b> <p id ="game_dev2">EABethsoft</p>
-        <b>Date Released:</b> <p id ="game_date2">August 2020</p>
-      </div>
-
-      <div class = "gamecard" id ="game3">
-        <a href="/game"><h3 id="game_title3">Game Title here</h3></a>
-        <b>Genre:</b> <p id = "game_genre3">All of them</p>
-        <b>Developer:</b> <p id ="game_dev3">EABethsoft</p>
-        <b>Date Released:</b> <p id ="game_date3">August 2020</p>
-      </div>
-
-      <div class = "gamecard" id ="game4">
-        <a href="/game"><h3 id="game_title4">Game Title here</h3></a>
-        <b>Genre:</b> <p id = "game_genre4">All of them</p>
-        <b>Developer:</b> <p id ="game_dev4">EABethsoft</p>
-        <b>Date Released:</b> <p id ="game_date4">August 2020</p>
-      </div>
-
-      <div class = "gamecard" id ="game5">
-        <a href="/game"><h3 id="game_title5">Game Title here</h3></a>
-        <b>Genre:</b> <p id = "game_genre5">All of them</p>
-        <b>Developer:</b> <p id ="game_dev5">EABethsoft</p>
-        <b>Date Released:</b> <p id ="game_date5">August 2020</p>
-      </div>
-
-      <div class = "gamecard" id ="game6">
-        <a href="/game"><h3 id="game_title6">Game Title here</h3></a>
-        <b>Genre:</b> <p id = "game_genre6">All of them</p>
-        <b>Developer:</b> <p id ="game_dev6">EABethsoft</p>
-        <b>Date Released:</b> <p id ="game_date6">August 2020</p>
-      </div>
-
-      <div class = "gamecard" id ="game7">
-        <a href="/game"><h3 id="game_title7">Game Title here</h3></a>
-        <b>Genre:</b> <p id = "game_genre7">All of them</p>
-        <b>Developer:</b> <p id ="game_dev7">EABethsoft</p>
-        <b>Date Released:</b> <p id ="game_date7">August 2020</p>
-      </div>
-
-      <div class = "gamecard" id ="game8">
-        <a href="/game"><h3 id="game_title8">Game Title here</h3></a>
-        <b>Genre:</b> <p id = "game_genre8">All of them</p>
-        <b>Developer:</b> <p id ="game_dev8">EABethsoft</p>
-        <b>Date Released:</b> <p id ="game_date8">August 2020</p>
-      </div>
-
-      <div class = "gamecard" id ="game9">
-        <a href="/game"><h3 id="game_title9">Game Title here</h3></a>
-        <b>Genre:</b> <p id = "game_genre9">All of them</p>
-        <b>Developer:</b> <p id ="game_dev9">EABethsoft</p>
-        <b>Date Released:</b> <p id ="game_date9">August 2020</p>
-      </div>
-
-      <div class = "gamecard" id ="game10">
-        <a href="/game"><h3 id="game_title10">Game Title here</h3></a>
-        <b>Genre:</b> <p id = "game_genre10">All of them</p>
-        <b>Developer:</b> <p id ="game_dev10">EABethsoft</p>
-        <b>Date Released:</b> <p id ="game_date10">August 2020</p>
-      </div>
-
-      <div class = "gamecard" id ="game11">
-        <a href="/game"><h3 id="game_title11">Game Title here</h3></a>
-        <b>Genre:</b> <p id = "game_genre11">All of them</p>
-        <b>Developer:</b> <p id ="game_dev11">EABethsoft</p>
-        <b>Date Released:</b> <p id ="game_date11">August 2020</p>
-      </div>
-
-      <div class = "gamecard" id ="game12">
-        <a href="/game"><h3 id="game_title12">Game Title here</h3></a>
-        <b>Genre:</b> <p id = "game_genre12">All of them</p>
-        <b>Developer:</b> <p id ="game_dev12">EABethsoft</p>
-        <b>Date Released:</b> <p id ="game_date12">August 2020</p>
-      </div>
-
-      <div class = "gamecard" id ="game13"> 
-        <a href="/game"><h3 id="game_title13">Game Title here</h3></a>
-        <b>Genre:</b> <p id = "game_genre13">All of them</p>
-        <b>Developer:</b> <p id ="game_dev13">EABethsoft</p>
-        <b>Date Released:</b> <p id ="game_date13">August 2020</p>
-      </div>
-
-        <div class = "gamecard" id ="game14">
-        <a href="/game"><h3 id="game_title14">Game Title here</h3></a>
-        <b>Genre:</b> <p id = "game_genre14">All of them</p>
-        <b>Developer:</b> <p id ="game_dev14">EABethsoft</p>
-        <b>Date Released:</b> <p id ="game_date14">August 2020</p>
-      </div>
-
-        <div class = "gamecard" id ="game15">
-        <a href="/game"><h3 id="game_title15">Game Title here</h3></a>
-        <b>Genre:</b> <p id = "game_genre15">All of them</p>
-        <b>Developer:</b> <p id ="game_dev15">EABethsoft</p>
-        <b>Date Released:</b> <p id ="game_date15">August 2020</p>
-      </div>
-
-        <div class = "gamecard" id ="game16">
-        <a href="/game"><h3 id="game_title16">Game Title here</h3></a>
-        <b>Genre:</b> <p id = "game_genre16">All of them</p>
-        <b>Developer:</b> <p id ="game_dev16">EABethsoft</p>
-        <b>Date Released:</b> <p id ="game_date16">August 2020</p>
-      </div>
-
-        <div class = "gamecard" id ="game17">
-        <a href="/game"><h3 id="game_title17">Game Title here</h3></a>
-        <b>Genre:</b> <p id = "game_genre17">All of them</p>
-        <b>Developer:</b> <p id ="game_dev17">EABethsoft</p>
-        <b>Date Released:</b> <p id ="game_date17">August 2020</p>
-      </div>
-
-             <div class = "gamecard" id ="game18">
-        <a href="/game"><h3 id="game_title18">Game Title here</h3></a>
-        <b>Genre:</b> <p id = "game_genre18">All of them</p>
-        <b>Developer:</b> <p id ="game_dev18">EABethsoft</p>
-        <b>Date Released:</b> <p id ="game_date18">August 2020</p>
-      </div>
-
-        <div class = "gamecard" id ="game19">
-        <a href="/game"><h3 id="game_title19">Game Title here</h3></a>
-        <b>Genre:</b> <p id = "game_genre19">All of them</p>
-        <b>Developer:</b> <p id ="game_dev19">EABethsoft</p>
-        <b>Date Released:</b> <p id ="game_date19">August 2020</p>
-      </div>
-
-        <div class = "gamecard" id ="game20">
-        <a href="/game"><h3 id="game_title20">Game Title here</h3></a>
-        <b>Genre:</b> <p id = "game_genre20">All of them</p>
-        <b>Developer:</b> <p id ="game_dev20">EABethsoft</p>
-        <b>Date Released:</b> <p id ="game_date20">August 2020</p>
-      </div>
-
-        <div class = "gamecard" id ="game21">
-        <a href="/game"><h3 id="game_title21">Game Title here</h3></a>
-        <b>Genre:</b> <p id = "game_genre21">All of them</p>
-        <b>Developer:</b> <p id ="game_dev21">EABethsoft</p>
-        <b>Date Released:</b> <p id ="game_date21">August 2020</p>
-      </div>
-
-       <div class = "gamecard" id ="game22">
-        <a href="/game"><h3 id="game_title22">Game Title here</h3></a>
-        <b>Genre:</b> <p id = "game_genre22">All of them</p>
-        <b>Developer:</b> <p id ="game_dev22">EABethsoft</p>
-        <b>Date Released:</b> <p id ="game_date22">August 2020</p>
-      </div>
-
-        <div class = "gamecard" id ="game23">
-        <a href="/game"><h3 id="game_title23">Game Title here</h3></a>
-        <b>Genre:</b> <p id = "game_genre23">All of them</p>
-        <b>Developer:</b> <p id ="game_dev23">EABethsoft</p>
-        <b>Date Released:</b> <p id ="game_date23">August 2020</p>
-      </div>
-
-        <div class = "gamecard" id ="game24">
-        <a href="/game"><h3 id="game_title24">Game Title here</h3></a>
-        <b>Genre:</b> <p id = "game_genre24">All of them</p>
-        <b>Developer:</b> <p id ="game_dev24">EABethsoft</p>
-        <b>Date Released:</b> <p id ="game_date24">August 2020</p>
-      </div>
-
-        <div class = "gamecard" id ="game25">
-        <a href="/game"><h3 id="game_title25">Game Title here</h3></a>
-        <b>Genre:</b> <p id = "game_genre25">All of them</p>
-        <b>Developer:</b> <p id ="game_dev25">EABethsoft</p>
-        <b>Date Released:</b> <p id ="game_date25">August 2020</p>
-      </div>
-
-
+    {{/each}}
       
-
-
   </div>
 
-
+      <div id="makenew" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div class = "forms">
+            <div class ="form_title"><h3>Add new Game</h3></div>
+              <form class = "form_form" id = "form_form" method="POST" action="database">
+                <p style="margin: 5px 0 0 0">Title</p>
+                <input type = "text" id = "play_title" placeholder = "Title" name="title">
+                <p style="margin: 5px 0 0 0">Genre</p>
+                <input type = "text" id = "play_title" placeholder = "Genre" name="genre">
+                <p style="margin: 5px 0 0 0">Publisher</p>
+                <input type = "text" id = "play_title" placeholder = "Publisher" name="publisher">
+                <p style="margin: 5px 0 0 0">Developer</p>
+                <input type = "text" id = "play_title" placeholder = "Developer" name="developer">
+                <p style="margin: 5px 0 0 0">Date Released</p>
+                <input type = "date" id = "play_title" placeholder = "2020" name="year">
+                <p style="margin: 5px 0 0 0">Description</p>
+                <textarea name="description" rows="4" cols="43"></textarea>
+                <br><button id = "submit">Submit</button>
+              </form>
+              <br>
+            </div>
+          </div>
+        </div> 
+      </div>
+      <div id="edit" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close_edit">&times;</span>
+          <div class = "forms">
+            <div class ="form_title"><h3>Edit Game</h3></div>
+              <form class = "form_form" id = "form_form" method="POST" action="db_edit">
+                <p style="margin: 5px 0 0 0">Select Game to Edit</p>
+                <select name="edit_id">
+                  {{#each docs}}
+                    <option value="{{_id}}">{{title}}</option>
+                  {{/each}}
+                </select>
+                <p style="margin: 5px 0 0 0">Title</p>
+                <input type = "text" id = "play_title" placeholder = "Title" name="edit_title">
+                <p style="margin: 5px 0 0 0">Genre</p>
+                <input type = "text" id = "play_title" placeholder = "Genre" name="edit_genre">
+                <p style="margin: 5px 0 0 0">Publisher</p>
+                <input type = "text" id = "play_title" placeholder = "Publisher" name="edit_publisher">
+                <p style="margin: 5px 0 0 0">Developer</p>
+                <input type = "text" id = "play_title" placeholder = "Developer" name="edit_developer">
+                <p style="margin: 5px 0 0 0">Date Released</p>
+                <input type = "date" id = "play_title" placeholder = "2020" name="edit_year">
+                <p style="margin: 5px 0 0 0">Description</p>
+                <textarea name="edit_description" rows="4" cols="43"></textarea>
+                <br><button id = "submit">Submit</button>
+              </form>
+              <br>
+            </div>
+          </div>
+        </div> 
+      </div>
+      <div id="delete" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close_del">&times;</span>
+          <div class = "forms">
+            <div class ="form_title"><h3>Delete Game</h3></div>
+              <form class = "form_form" id = "form_form" method="POST" action="db_delete">
+                <p style="margin: 5px 0 0 0">Select Game to Delete</p>
+                <select name="delete_id">
+                  {{#each docs}}
+                    <option value="{{_id}}">{{title}}</option>
+                  {{/each}}
+                </select>
+                <br><button id = "submit">Delete</button>
+              </form>
+              <br>
+            </div>
+          </div>
+        </div> 
+      </div>
 
 </div>
 </div>
 
-	<script src = "/js/home.js"></script>
+	<script src = "/js/database.js"></script>
 </body>
 </html>

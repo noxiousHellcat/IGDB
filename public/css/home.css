@@ -39,45 +39,54 @@ body{
     grid-template-rows: repeat(8, 1fr);
     grid-column-gap: 10px;
     grid-row-gap: 10px;
-    background-color: black;
+    background-color:#E7DFDF;
+    float:left;
   }
- .header {
-    background-color:whitesmoke;
-    height:12%;
-    border-bottom:solid black;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    background-color: rebeccapurple;
+  .header {
+    min-height:60px;
+    width:100%;
+    padding:7px;
+    background-color:#E7DFDF;
+    float:left;
   }
   .header a{
     text-decoration: none;
-    font-size: 12px;
-    line-height: 20px;
-    font-family: 'VCR', Fallback, sans-serif;
-    color:white;
-    float: center;
-  }
-  .header button,form 
-  {
     font-family: 'VCR', Fallback, sans-serif;
   }
-  
-  .header a:hover
+  .header button,form,#search
   {
-    color: greenyellow;
+    font-family: 'VCR', Fallback, sans-serif;
   }
 
   .header img{
     margin-left: 10px;
     margin-top: 10px;
   }
+
+  #header_logo{
+    float:left;
+    width:100%;
+  }
+  #banner_title{
+    font-family: 'VCR', Fallback, sans-serif;
+    font-size:5em;
+  }
   #links
   {
-    grid-area: 1/5;
+    width:50%;
+    float:left;
+    text-align:left;
   }
-
+  #sitesearch{
+    width: 50%;
+    float:left;
+    text-align:right;
+  }
+  .siteselect{
+    width:120px !important;
+    float:left;
+    margin-left:8px !important;
+  }
 #trending {
   margin-top: 1em;
   margin-left: 1em;
@@ -105,11 +114,7 @@ body{
 	background-color: #E7DFDF;
   padding:3em;
 	border:solid black;
-  border-radius: 12px;
-  box-shadow: inset 0px 0px 10px 10px  rgba(122,122,122,0.8);  
-
-  
-
+  border-radius: 12px; 
 }
 
 

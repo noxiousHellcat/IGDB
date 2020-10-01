@@ -3,44 +3,62 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/playlist.css">
-    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/nes.css/css/nes.css">
+    <title>IGDB - Playlist - {{title}}</title>
   </head>
   <body id = "page">
     <div id ="filter"></div>
-    <div class = "header">
-      <!--Header image here-->
-      <img src="images/IGDB.png" height="75" width="200">
-      <div id ="links">
-        <a href ="/"> Home</a> 
-        <a href ="/database"> Database</a> 
-        <a href="/login">Sign In/Register</a>
-                <a href="/about">About</a>
-
-        <form method="GET" action="search">
-          <input type="search" name="query" placeholder="Search Game Titles or Users.."><br>
-          <button type="submit" value="Search">Search</button>
-          <select name="search_select">
-                            <option value="user">Users</option>
-                            <option value="game">Games</option>
-                        </select>
-        </form>
-     </div>
+<div class = "header">
+    <!--Header image here-->
+    <div id="header_logo" class="nes-container is-rounded is-dark" style="background-color: rebeccapurple !important">
+      <center>
+        <span id="banner_title">INTERNET GAMES DATABASE</span>
+      </center>
     </div>
+    <div id ="links">
+        <a class="nes-btn" href ="/"> Home</a> 
+        <a class="nes-btn" href ="/database"> Database</a> 
+        {{#if susername}}
+          <a class="nes-btn" href="/user_page?uid={{uid}}">User Page</a>
+          <a class="nes-btn" href="/logout">Sign out {{susername}}</a>
+        {{else}}        
+          <a class="nes-btn" href="/login">Sign In/Register</a>
+        {{/if}}
+        <a class="nes-btn" href="/about">About</a>
+    </div>
+    <div id="sitesearch">
+      <form method="GET" action="search" id = "search">
+          <button type="submit" value="Search" class="nes-btn" style="float:left">Search</button>
+          <div class="nes-select siteselect">
+            <select name="search_select">
+              <option value="user">Users</option>
+              <option value="game">Games</option>
+            </select>
+          </div>
+          <div class="nes-field is-inline"  >
+              <input style="margin-left:8px !important" type="search" name="query" placeholder="Search Game Titles or Users.." class="nes-input">
+          </div>
+      </form>
+    </div>
+</div>
       
     </div>
     <div class="page">
       <div class="playground"> 
-          <a id = "return" href = "/user_page">Return</a>
-      </div>
       <div class="playsholder">
-      <h1>Playlist</h1>
-      Description
+      <h1>{{title}}</h1>
+      {{description}}
       </div>
       <div class="playarea">
-      
+      {{#each pgames}}
+        <br>
+        {{@index}}. <a href = "/game?gid={{_id}}">{{title}}</a>
+      {{/each}}
       </div>
       <div class="playbutton"> 
-        <button id="addnew">Add Game</button>
+        {{#if owned}}
+          <button id="addnew" class="nes-btn">Add Game</button>
+        {{/if}}
       </div>
 
       <div id="makenew" class="modal">
@@ -49,13 +67,13 @@
         <div class="modal-content">
           <span class="close">&times;</span>
           <div class = "forms">
-            <div class ="form_title"><h1>Add new Game</h1></div>
-            <form class = "form_form" id = "form_form" method="POST" action="playlist_add">
+            <div class ="form_title"><h1>Add a game to playlist</h1></div>
+            <form class = "form_form" id = "form_form" method="POST" action="/playlist_add?pid={{pid}}">
             <select name="game">
-                            <option value="user">Game 1</option>
-                            <option value="game">Game 2</option>
-                            <option value="game">Game 3</option>
-                        </select><br>
+              {{#each games}}
+                    <option value="{{_id}}">{{title}}</option>
+              {{/each}}
+            </select><br>
             <button id = "submit">Submit</button>
           </form>
           <br>

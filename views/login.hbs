@@ -7,30 +7,42 @@
         <title>IGDB - Login</title>
     </head>
     <body>
-            <div class = "header"><!--Header image here-->
-                <div>
-                <img src="images/IGDB.png" height="75" width="200">
-                </div>
-                <div id ="links">
-                      <a href ="/"> Home</a> 
-                      <a href ="/database"> Database</a> 
-                    <a href="/login">Sign In/Register</a>
-                            <a href="/about">About</a>
+<div class = "header">
+    <!--Header image here-->
+    <div id="header_logo" class="nes-container is-rounded is-dark" style="background-color: rebeccapurple !important">
+      <center>
+        <span id="banner_title">INTERNET GAMES DATABASE</span>
+      </center>
+    </div>
+    <div id ="links">
+        <a class="nes-btn" href ="/"> Home</a> 
+        <a class="nes-btn" href ="/database"> Database</a> 
+        <a class="nes-btn" href="/about">About</a>
+    </div>
+    <div id="sitesearch">
+      <form method="GET" action="search" id = "search">
+          <button type="submit" value="Search" class="nes-btn" style="float:left">Search</button>
+          <div class="nes-select siteselect">
+            <select name="search_select">
+              <option value="user">Users</option>
+              <option value="game">Games</option>
+            </select>
+          </div>
+          <div class="nes-field is-inline"  >
+              <input style="margin-left:8px !important" type="search" name="query" placeholder="Search Game Titles or Users.." class="nes-input">
+          </div>
+      </form>
+    </div>
+</div>
 
-                    <form method="GET" action="search">
-                        <input type="search" name="q" placeholder="Search Game Titles or Users.."><br>
-                        <button type="submit" value="Search">Search</button>
-                        <select name="search_select">
-                            <option value="user">Users</option>
-                            <option value="game">Games</option>
-                        </select>
-                    </form>
-                </div>    
-            </div>
     <div class = "nes-container is-rounded" id="page">
         <div id = "log_box">
             <div id = "box_title">
-                <h2>Something quirky  I don't know</h2>
+                {{#if error}}
+                    <h2>{{error}}</h2>
+                {{else}}
+                    <h2>Sign in to IGDB</h2>
+                {{/if}}
             </div>
             <div id = "details">
                 <form method="POST" action="login">
@@ -62,9 +74,6 @@
                 <p>Password</p>
                 <input id = "pword" type="password" name="password" placeholder="Enter Password">
                 <input id = "pword2" type="password" name="" placeholder="Confrm Password">
-                <br>
-                <p>Birthday</p>
-                <input id = "birth" type="date" name="birthday">
                 <br>
                 <br>
                 <button id ="sub" type="submit" value="register">Register</button>

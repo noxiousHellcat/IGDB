@@ -23,56 +23,34 @@ html
 #links select{ width:fit-content}
 body{
     margin: 0;
-    padding: 0;
-    background-color:white;
+    padding: 0; 
     background-size: cover;
     background-position: center;
     height: 100%;
-
-   
-    
+    background-color:#E7DFDF;
+    font-size: 12px;
+    font-family: 'VCR', Fallback, sans-serif;
   }
   .page
   {
-    display: grid;
-    height: 88%;
-    position: absolute;
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
+    height: 100%;
+    width:100%;
     background-color:#E7DFDF;
-    grid-auto-flow: column;
-    grid-auto-columns: 300px 100px;
-    grid-template-columns: repeat(5, 1fr);
-     grid-template-rows: repeat(5, 1fr);
-    
   }
   .header {
-    background-color:whitesmoke;
-    height:12%;
-    border-bottom:solid black;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    background-color: rebeccapurple;
-
+    min-height:60px;
+    width:100%;
+    padding:7px;
+    background-color:#E7DFDF;
+    float:left;
   }
   .header a{
     text-decoration: none;
-    font-size: 12px;
-    line-height: 20px;
     font-family: 'VCR', Fallback, sans-serif;
-    color:white;
-    float: center;
   }
   .header button,form,#search
   {
     font-family: 'VCR', Fallback, sans-serif;
-  }
-  
-  .header a:hover
-  {
-    color: greenyellow;
   }
 
   .header img{
@@ -80,13 +58,30 @@ body{
     margin-top: 10px;
   }
 
+  #header_logo{
+    float:left;
+    width:100%;
+  }
+  #banner_title{
+    font-family: 'VCR', Fallback, sans-serif;
+    font-size:5em;
+  }
   #links
   {
-    grid-area: 1/5 ;
+    width:50%;
+    float:left;
+    text-align:left;
   }
-
-
-
+  #sitesearch{
+    width: 50%;
+    float:left;
+    text-align:right;
+  }
+  .siteselect{
+    width:120px !important;
+    float:left;
+    margin-left:8px !important;
+  }
   #search_bar
   {
     background-color:rebeccapurple;
@@ -94,31 +89,21 @@ body{
     grid-area: 1 / 1 / 6 / 2; 
     font-family: 'Gravity', Fallback, sans-serif; 
     color: white;
-    font-size: 1vw;
     overflow: hidden;
   }
 
   
   #search_bar p,h3,input
   {
-    font-family: 'Gravity', Fallback, sans-serif; 
-    font-size: 1.4vh;
+    font-family: 'VCR', Fallback, sans-serif;
     
     align-content: center;
   }
-  #search_bar table{font-size: 1.4vh;color: white;}
 
   #insertion_point{
-    grid-area: 1 / 2 / 6 / 7; 
-    display:grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
-    grid-auto-rows: auto;
-    grid-gap:1em ;    
     margin: 10px;
     overflow-y: auto;
-    background-color:whitesmoke;
-    
+    background-color: #E7DFDF;
   }
   #insertion_point:after {
     content: "";
@@ -130,17 +115,16 @@ body{
   color: white;
   background-color: rebeccapurple;
   padding: 7px;
-  border-radius: 10px;
   margin: 10px;
-  height: 200px;
-  min-height:199px ;
-  font-family: 'Gravity', Fallback, sans-serif; 
-  font-size: 1.3vh;
+  width:18%;
+  min-height:400px ;
+  font-family: 'VCR', Fallback, sans-serif;
   border: solid rgba(0,0,0,0.8); ;
-
+  float:left;
 }
 
 .gamecard a{color: white;}
+.gamecard a:hover{color: white;}
 
 .gamecard:hover {
   box-shadow:4px 4px 2px 0px rgba(122,122,122,0.8);
@@ -164,7 +148,6 @@ body{
 ::-webkit-scrollbar-thumb {
   background: #d16fd8;
   border: 0px none #ffffff;
-  border-radius: 50px;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #b670d7;
@@ -175,7 +158,6 @@ body{
 ::-webkit-scrollbar-track {
   background: #ffffff;
   border: 0px none #ffffff;
-  border-radius: 50px;
 }
 ::-webkit-scrollbar-track:hover {
   background: #eee2e2;
@@ -187,3 +169,92 @@ body{
   background: transparent;
 }
 
+/*Modal*/
+.edit_btn {
+  font-family: 'VCR', Fallback, sans-serif;
+}
+.del_btn {
+  font-family: 'VCR', Fallback, sans-serif;
+}
+#addnew {
+  font-family: 'VCR', Fallback, sans-serif;
+}
+.modal {
+  display: none; 
+  position: fixed;
+  grid-area: 3 / 2 / 10 / 10;
+  z-index: 2; 
+  width: 40%;
+  height: auto;
+  background-color: #E7DFDF;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  overflow: auto; /* Enable scroll if needed */
+  border: solid rgba(0,0,0,0.8); ;
+}
+
+.close {
+  margin-right:28px ;
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close_edit {
+  margin-right:28px ;
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close_del {
+  margin-right:28px ;
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+}
+.close_edit:hover,
+.close_edit:focus {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+}
+.close_del:hover,
+.close_del:focus {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+  #filter{
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    background-color: rgba(0,0,0,0.3); /* Black background with opacity */
+   z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover*/
+    display: none;
+  }
+
+
+  .forms
+  {
+    margin-top: 3em;
+    margin-left: 3em;
+  }
+  .forms input
+  {
+    width: 70%;
+  }
